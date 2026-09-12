@@ -18,13 +18,13 @@
 
 **Memory Cell is a high-performance, 100% private cognitive runtime and deep code intelligence engine.** Unlike heavy external databases or brittle vector-only stores, Memory Cell provides a unified intelligence layer designed for seamless dual-mode usage:
 
-1. 🧑‍💻 **For Developers (Native CLI)**: A lightning-fast, zero-dependency terminal companion to navigate codebase architecture, inspect bidirectional call hierarchies, run semantic reasoning over docs, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) right in your terminal.
-2. 🤖 **For AI Agents (MCP Server)**: A persistent shared brain that gives autonomous agents (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**) episodic memory, cross-agent session handover (`/takeover`), and 50%~90% token savings by replacing wasteful brute-force file scanning with sub-millisecond precision lookups.
+1. 🖥️ **When You Work in the Terminal (Native CLI)**: Your lightning-fast, zero-dependency engineering companion to explore codebase architecture, trace bidirectional call flows, query documentation with semantic reasoning, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) directly from your shell.
+2. 🤖 **When You Pair with AI Agents (MCP Mode)**: Your persistent intelligence hub that bridges all your AI assistants (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**). It eliminates repetitive context-setting, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force file scans with precision lookups.
 
 ```text
        ┌──────────────────────────────┐        ┌──────────────────────────────┐
-       │   🧑‍💻 Developer Terminal      │        │    🤖 Autonomous AI Agents   │
-       │   (CLI / Scripts / CI/CD)    │        │  (Claude, Cursor, AGY, ...)  │
+       │   🖥️ Interactive Terminal     │        │ 🤖 Agentic Pair Programming  │
+       │    (You in Shell / CI/CD)    │        │  (You with Claude, Cursor...)│
        └──────────────┬───────────────┘        └──────────────┬───────────────┘
                       │                                       │
                       │ Native CLI Commands                   │ Model Context Protocol (MCP)
