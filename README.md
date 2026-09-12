@@ -123,26 +123,28 @@ memory-cell init
 Memory Cell equips coding agents with a structured cognitive layer composed of specialized tools that replace noisy brute-force file scanning with surgical, token-efficient intelligence:
 
 ### 1. 🧠 Grounded Reasoning & Unified Search (Cognitive Retrieval)
-- `reason("<query>", workspace_path: ".")`: **Grounding Engine.** Retrieves AST-indexed document sections, active domain concepts, verified workflows, and architectural rules without reading raw files or blowing context tokens.
+- `reason("<query>", workspace_path: ".")`: **Grounding Engine.** Retrieves structured document sections, active domain concepts, verified workflows, and architectural rules without reading raw files or blowing context tokens.
 - `search("<query>")`: **Holographic Search.** Concurrently queries code symbols (`find_symbol`) and long-term memory (`reason`), synthesizing verified code locations and living docs into a single high-density context.
 - `ingest(file_path: "...")`: Ingests documents (Markdown, Code, PDF) through the zero-leakage cognitive pipeline into memory.
 - `forget(id: "...")`: Removes obsolete engrams and their associated living doc from disk.
 
 ### 2. ⚡ Deep Code Intelligence & Topological Navigation (22 Languages)
-Instant AST-level code navigation across 22 major languages in < 15ms P75 lookup:
+Instant syntax-aware code navigation across 22 major languages in < 15ms P75 lookup:
 - `find_symbol("<name>")`: Pinpoints functions, structs, classes, interfaces, traits, and exact line definitions.
 - `trace_callers("<symbol>", direction: "callers" | "callees")`: Bidirectional call hierarchy tracing across files without manual searching.
 - `find_references("<identifier>")`: Locates exact declarations, reads, and writes for variables and fields.
 - `analyze_impact("<symbol>")`: Evaluates blast radius and affected call sites before refactoring critical interfaces.
 
-### 3. 🔄 Autonomous Learning Across 6 Universal Knowledge Dimensions
-Agents and developers autonomously distill experience and preserve knowledge into long-term memory:
-1. 🛠️ `learn_workflow`: Verified step-by-step procedures (SOPs) for automated replay.
-2. ⚠️ `learn_antipattern`: Inhibitory rules that prevent recurring mistakes and hallucinations.
-3. 👤 `learn_preference`: User/team coding style, architectural constraints, and guidelines.
-4. 🏛️ `learn_decision`: Architectural Decision Records (ADRs) and trade-offs.
-5. 💡 `learn_concept`: Domain models, entities, and project terminology.
-6. ⚡ `learn_heuristic`: Fast-and-frugal rules of thumb and optimization shortcuts.
+### 3. 🔄 Autonomous Continuous Learning (Automated Dream Consolidation)
+Developers don't need to manually micromanage knowledge bases or remember individual learning commands. Memory Cell autonomously captures session events, troubleshooting trails, and coding corrections, then consolidates them into long-term structured memory via **Dream Consolidation** (`dream()`):
+- **Episodic ➔ Semantic Consolidation**: Automatically distills raw session logs and interactions into permanent structured engrams across 6 Universal Knowledge Dimensions:
+  - 🛠️ **Workflows & SOPs**: Verified step-by-step procedures distilled from successful tasks for automated replay.
+  - ⚠️ **Anti-Patterns & Pitfalls**: Inhibitory guardrails learned from bugs, failed attempts, and user corrections.
+  - 👤 **Developer Preferences**: Coding guidelines, project conventions, and stylistic directives.
+  - 🏛️ **Architectural Decisions (ADRs)**: Key trade-offs and structural rationale recorded in context.
+  - 💡 **Domain Concepts**: Project terminology, mental models, and core entity definitions.
+  - ⚡ **Heuristics**: Fast-and-frugal engineering rules of thumb and performance optimizations.
+- **Autonomous Triggering & Sleep Cycles**: Consolidation runs automatically in the background (or via `memory-cell dream`), pruning redundant noise while detecting cross-session contradictions.
 
 ### 4. 🤝 Cross-Agent Working Memory Handover & Episodic Recall
 - `takeover()`: Switching between different agents, models, or IDEs? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes the active goal, obstacle trails, and execution context (<180 tokens) without losing state.
@@ -153,6 +155,21 @@ Agents and developers autonomously distill experience and preserve knowledge int
 - `list_governance_tickets()`: Lists knowledge contradictions flagged during consolidation.
 - `resolve_governance_ticket(ticket_id, action)`: Human-in-the-loop conflict resolution (supersede, inhibit, or ignore).
 - `stats()`: Real-time token savings, cognitive health scorecards, and managed engram distribution.
+
+---
+
+## ⚡ Agent Skills & Slash Commands (Zero-Friction UX)
+
+`memory-cell init` automatically provisions specialized agent skills and slash commands across all your IDEs and CLI agents (Google Antigravity, Claude Code, Cursor, Codex). Agents proactively load these workflows or you can invoke them directly:
+
+| Slash Command | Agent Skill | Capability & Description |
+| :--- | :--- | :--- |
+| `/takeover` | `takeover` | **Instant Cross-Tool Handover.** Resumes working memory, active subgoals, and obstacles across IDEs in < 180 tokens without manual briefing. |
+| `/dream` | `dream` | **Consolidation & Graph Hygiene.** Runs two-phase consolidation to distill raw episodic sessions into permanent Neocortex knowledge and resolve contradictions. |
+| `/memorize` | `memorize` | **Explicit Knowledge Persistence.** Quickly captures and classifies critical lessons, SOPs, or rules into `.memory/` across 6 dimensions. |
+| `/impact <symbol>` | `impact` | **Blast Radius Evaluation.** Inspects call hierarchies and calculates risk before refactoring critical functions, structs, or traits. |
+| `/recall <query>` | `recall` | **Episodic Timeline Explorer.** Queries chronological debugging trails and past session decisions with forward-timeline synthesis. |
+| `/stats` | `stats` | **Cognitive Health & ROI Scorecard.** Displays managed engram distribution, duplicate filter ratio, and total context token savings. |
 
 ---
 
