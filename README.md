@@ -66,7 +66,7 @@ To make autonomous agents truly capable, they need **mind, alignment, and contin
 ## 🚀 Key Benefits
 
 - ⚡ **< 15ms P75 In-Conversation Retrieval**: Instant precision grounding across code, living documentation, and shared team playbooks without context lag.
-- 🗜️ **50%–90% Token Reduction**: Decoupled reasoning retrieves only the necessary context window without stuffing entire files or brute-forcing vector chunks.
+- 🗜️ **50%–90% Token Reduction**: Surgically pinpoints only the relevant lines and sections instead of dumping entire files or flooding context with noisy fragments.
 - 🛡️ **Zero GraphDB Overhead**: Pure embedded SQLite architecture. Zero Neo4j, Redis, or external vector service dependencies.
 - 🌐 **True Cross-Tool Continuity**: Works seamlessly across Claude Code, Cursor, Windsurf, Codex, Gemini, Terminal, and CI/CD pipelines via universal MCP protocols.
 - 🔄 **Zero-Friction Living Knowledge**: Edit any markdown file or code in your repo as usual. Memory Cell automatically hot-syncs changes and prunes deleted files in real-time.
