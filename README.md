@@ -17,28 +17,33 @@
 
 ---
 
-## 💥 The Trilemma of AI Memory (Why Current Systems Fail)
+## 💥 The 4 Universal Frustrations of Building with AI (Why Current Systems Fail)
 
-As software engineering embraces agentic workflows, teams inevitably run into the **Trilemma of Enterprise AI Memory — the fatal deadlock between Unit Economics, Reasoning Precision, and Governance**:
+Despite using frontier models, developers and engineering teams face four painful realities every single day:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                      THE 3 GOVERNANCE DEADLOCKS OF AI MEMORY                           │
+│                      THE 4 GOVERNANCE DEADLOCKS OF AI MEMORY                           │
 │                                                                                        │
-│  1. 📉 Marginal Cost Curse (Unit Economics Bleed)                                      │
-│     Compensating for agent amnesia by stuffing giant context windows or brute-force    │
-│     full-repo grep scans burns tens of thousands of tokens per prompt, collapsing      │
-│     operating margins (<40% gross margins) as codebases grow.                         │
+│  1. 💸 The Amnesia Tax (Paying to Re-explain Everything)                               │
+│     Every new session erases working context. You are forced to repeatedly paste code  │
+│     snippets, re-explain architecture, and burn thousands of tokens just to bring the  │
+│     AI back up to speed, destroying unit economics.                                   │
 │                                                                                        │
-│  2. 🧩 Broken Reasoning & Lost Structure (The Vector Black Box)                        │
-│     Traditional RAG "chunking" shatters code topology and document hierarchies. Blind  │
-│     vector similarity cannot perform multi-hop call graph navigation, leading to       │
-│     hallucinations in complex cross-file architectures and enterprise codebases.       │
+│  2. 🌀 The "Smart but Blind" Dilemma (Local Fixes, Global Breakages)                   │
+│     Agents write great code in isolation, but are completely blind to overall codebase │
+│     topology. They confidently fix function A while silently breaking service B,        │
+│     turning code generation into an endless debugging loop.                            │
 │                                                                                        │
-│  3. 🕳️ Mutation & Governance Blackhole (Zero Auditability)                              │
-│     Code and technical specifications evolve daily. Traditional vector embeddings      │
-│     cannot perform surgical updates—stale memories silently poison future runs, and   │
-│     black-box retrievals provide zero deterministic provenance back to exact code lines.│
+│  3. 🏝️ The Siloed Agent Island (Zero Cross-Tool Memory Sharing)                        │
+│     Bug fixes and hard-won lessons discovered in Cursor are invisible to Claude Code in│
+│     your terminal. Each tool, model, and teammate operates in complete isolation,     │
+│     repeating the exact same research and troubleshooting from scratch.                │
+│                                                                                        │
+│  4. ⚖️ The Knowledge Governance Void (Unversioned, Stale & Ungoverned Context)         │
+│     Technical specs and ADRs evolve continuously, but vector black boxes cannot         │
+│     surgically prune stale rules. Deprecated patterns poison future runs, with zero    │
+│     line-level audit trails back to authoritative sources.                            │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
