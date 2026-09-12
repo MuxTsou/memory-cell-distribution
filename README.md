@@ -35,7 +35,7 @@ Despite using frontier models, developers and engineering teams face painful rea
 
 ---
 
-## 💡 The Solution: Memory Cell (Dual-Mode Intelligence)
+## 💡 The Solution: Memory Cell
 
 **Memory Cell solves the memory trilemma through first-principles cognitive governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (Code Topology Pointers), Memory Cell delivers a 100% private, < 15ms P75 intelligence layer with zero graph database maintenance overhead. It is designed for seamless dual-mode usage:
 
@@ -76,14 +76,6 @@ Despite using frontier models, developers and engineering teams face painful rea
 
 ---
 
-## 🛠️ MCP Cognitive Tools (For AI Agents)
-
-When configured as an MCP server, Memory Cell exposes powerful cognitive tools that your AI agents use autonomously:
-
-- `reason("<question>")`: Decoupled semantic reasoning that pinpoints active concepts, verified SOPs, architectural decisions, and relevant document sections.
-- `find_symbol("<name>")`: < 15ms P75 lookup of functions, structs, classes, interfaces, and traits.
-
----
 
 ## 📦 Installation Options
 
@@ -126,26 +118,41 @@ memory-cell init
 
 ---
 
-## 🌟 Core Capabilities
+## 🛠️ MCP Cognitive Tools (For AI Agents)
 
-### 1. ⚡ Deep Code Intelligence & Topological Navigation (22 Languages)
-Deep semantic understanding across 22 major programming languages:
-- `find_symbol("<name>")`: < 15ms P75 lookup of functions, structs, classes, interfaces, and traits.
-- `trace_callers("<symbol>", direction: "callers" | "callees")`: Instant call hierarchy tracing across files without manual searching.
-- `find_references("<identifier>")`: Pinpoint exact declarations, reads, and writes.
-- `analyze_impact("<symbol>")`: Evaluate blast radius before making critical refactoring changes.
+Memory Cell equips coding agents with a structured cognitive layer composed of specialized tools that replace noisy brute-force file scanning with surgical, token-efficient intelligence:
 
-### 2. 🔄 Autonomous Learning Across 6 Universal Knowledge Dimensions
+### 1. 🧠 Grounded Reasoning & Unified Search (Cognitive Retrieval)
+- `reason("<query>", workspace_path: ".")`: **Grounding Engine.** Retrieves AST-indexed document sections, active domain concepts, verified workflows, and architectural rules without reading raw files or blowing context tokens.
+- `search("<query>")`: **Holographic Search.** Concurrently queries code symbols (`find_symbol`) and long-term memory (`reason`), synthesizing verified code locations and living docs into a single high-density context.
+- `ingest(file_path: "...")`: Ingests documents (Markdown, Code, PDF) through the zero-leakage cognitive pipeline into memory.
+- `forget(id: "...")`: Removes obsolete engrams and their associated living doc from disk.
+
+### 2. ⚡ Deep Code Intelligence & Topological Navigation (22 Languages)
+Instant AST-level code navigation across 22 major languages in < 15ms P75 lookup:
+- `find_symbol("<name>")`: Pinpoints functions, structs, classes, interfaces, traits, and exact line definitions.
+- `trace_callers("<symbol>", direction: "callers" | "callees")`: Bidirectional call hierarchy tracing across files without manual searching.
+- `find_references("<identifier>")`: Locates exact declarations, reads, and writes for variables and fields.
+- `analyze_impact("<symbol>")`: Evaluates blast radius and affected call sites before refactoring critical interfaces.
+
+### 3. 🔄 Autonomous Learning Across 6 Universal Knowledge Dimensions
 Agents and developers autonomously distill experience and preserve knowledge into long-term memory:
-1. 🛠️ **Workflow**: Verified step-by-step procedures for automated replay.
-2. ⚠️ **Anti-Pattern**: Inhibitory rules that prevent recurring mistakes and hallucinations.
-3. 👤 **Preference**: User/team coding style, architectural constraints, and guidelines.
-4. 🏛️ **Decision**: Architectural Decision Records (ADRs) and trade-offs.
-5. 💡 **Concept**: Domain models, entities, and project terminology.
-6. ⚡ **Heuristic**: Fast-and-frugal rules of thumb and optimization shortcuts.
+1. 🛠️ `learn_workflow`: Verified step-by-step procedures (SOPs) for automated replay.
+2. ⚠️ `learn_antipattern`: Inhibitory rules that prevent recurring mistakes and hallucinations.
+3. 👤 `learn_preference`: User/team coding style, architectural constraints, and guidelines.
+4. 🏛️ `learn_decision`: Architectural Decision Records (ADRs) and trade-offs.
+5. 💡 `learn_concept`: Domain models, entities, and project terminology.
+6. ⚡ `learn_heuristic`: Fast-and-frugal rules of thumb and optimization shortcuts.
 
-### 3. 🤝 Cross-Agent Working Memory Handover (`takeover`)
-Switching between different agents, models, or environments? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes your active goal, execution context, and ongoing tasks without losing state.
+### 4. 🤝 Cross-Agent Working Memory Handover & Episodic Recall
+- `takeover()`: Switching between different agents, models, or IDEs? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes the active goal, obstacle trails, and execution context (<180 tokens) without losing state.
+- `recall("<query>")`: Recalls chronological episodic timeline logs and debugging history from Hippocampus across past sessions.
+
+### 5. 🌙 Consolidation & Cognitive Governance
+- `dream(dry_run: false)`: Triggers two-phase consolidation (Hippocampus episodic events ➔ Neocortex structured Engrams + contradiction detection).
+- `list_governance_tickets()`: Lists knowledge contradictions flagged during consolidation.
+- `resolve_governance_ticket(ticket_id, action)`: Human-in-the-loop conflict resolution (supersede, inhibit, or ignore).
+- `stats()`: Real-time token savings, cognitive health scorecards, and managed engram distribution.
 
 ---
 
