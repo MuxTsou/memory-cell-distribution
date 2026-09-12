@@ -72,7 +72,7 @@ Despite using frontier models, developers and engineering teams face painful rea
 - 🗜️ **50%–90% Token Reduction**: Decoupled reasoning retrieves only the necessary context window without stuffing entire files or brute-forcing vector chunks.
 - 🛡️ **Zero GraphDB Overhead**: Pure embedded SQLite architecture. Zero Neo4j, Redis, or external vector service dependencies.
 - 🌐 **True Cross-Tool Continuity**: Works seamlessly across Claude Code, Cursor, Windsurf, Codex, Gemini, Terminal, and CI/CD pipelines via universal MCP protocols.
-- 🔄 **Git-Native Memory Governance**: Human-readable Living Docs (`docs/` and `.memorycell/`) that commit, branch, and PR alongside your regular code.
+- 🔄 **Git-Native Memory Governance**: Human-readable Living Docs (`.memory/`) that commit, branch, and PR alongside your regular code.
 
 ---
 
