@@ -19,19 +19,16 @@
 
 ## 🤯 Problems & Dilemmas of Agents
 
-Despite using frontier models, developers and engineering teams face painful realities every single day:
+To make autonomous agents truly capable, they need **mind, alignment, and continuity**. Yet in reality, teams scaling agents hit 3 fatal bottlenecks every single day:
 
-1. 💸 **The Amnesia Tax (Paying to Re-explain Everything)**  
-   Every new session erases working context. You are forced to repeatedly paste code snippets, re-explain architecture, and burn thousands of tokens just to bring the AI back up to speed, destroying unit economics.
+1. 💸 **"Burning 90% Tokens on Noise: The Cost & Quota Wall" (The Marginal Waste)**  
+   Without precision memory, agents brute-force entire files and histories on every turn. You either hit humiliating weekly usage caps mid-sprint, or burn thousands of dollars on sluggish 30-second context evaluation that destroys product margins.
 
-2. 🌀 **The "Smart but Blind" Dilemma (Local Fixes, Global Breakages)**  
-   Agents write great code in isolation, but are completely blind to overall codebase topology. They confidently fix function A while silently breaking service B, turning code generation into an endless debugging loop.
+2. 🌀 **"Fixed One Function, Silently Broke Three Other Services" (The Blind-Spot Bug)**  
+   Agents write code with supreme confidence, but they can't see beyond the file in front of them. The AI happily renames a parameter or tweaks logic in module A, completely unaware that services B and C depend on it—turning a 2-minute fix into hours of debugging regressions.
 
-3. 🏰 **The Knowledge Silo & Sovereignty Lock-in (Zero Cross-Tool Neutrality)**  
-   Hard-won fixes and proprietary architectural insights are trapped inside vendor silos. Moving between Cursor, Claude Code, Windsurf, or Terminal means resetting experience to zero. Teams lack a sovereign, platform-neutral memory layer that they truly own.
-
-4. ⚖️ **The Knowledge Governance Void (Unversioned, Stale & Ungoverned Context)**  
-   Technical specs and ADRs evolve continuously, but vector black boxes cannot surgically prune stale rules. Deprecated patterns poison future runs, with zero line-level audit trails back to authoritative sources.
+3. 🏰 **"Millions of Tokens Burned, Zero Knowledge Owned" (The Hostage & Amnesia Trap)**  
+   Hard-won bug fixes, custom architectural invariants, and domain SOPs are held hostage inside closed IDEs and cloud black boxes. Without a sovereign, tool-neutral memory layer, your team's collective intelligence never compounds—it evaporates the moment you switch tools or models, forcing agents to reset to day zero forever.
 
 ---
 
@@ -107,14 +104,12 @@ Run directly inside any project repository root:
 memory-cell init
 ```
 
-✨ **Automatically detects and configures all supported environments on your machine:**
-- [x] **Google Antigravity** (`.agents/mcp_config.json` + `hooks.json` + `skills/` + `plugin.json`)
-- [x] **Cursor IDE** (`.cursor/mcp.json`)
-- [x] **Claude Code CLI** (`.mcp.json` + `.claude/hooks.json` + `.claude/commands/`)
-- [x] **OpenCode Interpreter** (`.opencode/mcp.json`)
-- [x] **Hermes Agent** (`.hermes/config.yaml`)
-- [x] **OpenAI Codex CLI** (`.codex/config.toml`)
-- [x] **GitHub Copilot / VS Code** (`.vscode/mcp.json`)
+✨ **Automatically detects and provisions MCP tools, life-cycle hooks, and agent skills across your development stack:**
+- **Anthropic Claude**: Claude Code CLI, Claude Desktop
+- **Google Antigravity**: Antigravity IDE, Antigravity CLI (`agy`)
+- **AI-Native IDEs**: Cursor, Windsurf
+- **VS Code Ecosystem**: GitHub Copilot, Roo Code, Cline
+- **Agent Harnesses**: Hermes Agent, OpenCode Interpreter, Codex
 
 ---
 
