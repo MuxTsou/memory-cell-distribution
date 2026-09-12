@@ -1,7 +1,7 @@
 # 🧠 Memory Cell
 
 <p align="center">
-  <strong>The Cognitive Knowledge Engine & AST Code Graph for Developers and AI Agents</strong>
+  <strong>The Cognitive Knowledge & Deep Code Intelligence Runtime for Developers and AI Agents</strong>
 </p>
 
 <p align="center">
@@ -16,10 +16,10 @@
 
 ## 💡 What is Memory Cell? (Dual-Mode Intelligence)
 
-**Memory Cell is a high-performance, 100% private cognitive runtime and AST code graph engine.** It is designed to work seamlessly in two ways:
+**Memory Cell is a high-performance, 100% private cognitive runtime and deep code intelligence engine.** Unlike heavy external databases or brittle vector-only stores, Memory Cell provides a unified intelligence layer designed for seamless dual-mode usage:
 
-1. 🧑‍💻 **For Developers (Native CLI)**: A lightning-fast, zero-dependency terminal toolkit to explore codebases, inspect bidirectional call hierarchies, run semantic reasoning over docs, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) right in your terminal.
-2. 🤖 **For AI Agents (MCP Server)**: A unified, shared cognitive layer that gives coding assistants (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**) persistent long-term memory, cross-IDE context handover (`/takeover`), and 50%~90% token savings by replacing wasteful brute-force file scans with grounded AST lookups.
+1. 🧑‍💻 **For Developers (Native CLI)**: A lightning-fast, zero-dependency terminal companion to navigate codebase architecture, inspect bidirectional call hierarchies, run semantic reasoning over docs, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) right in your terminal.
+2. 🤖 **For AI Agents (MCP Server)**: A persistent shared brain that gives coding assistants (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**) episodic memory, cross-IDE session handover (`/takeover`), and 50%~90% token savings by replacing wasteful brute-force file scanning with sub-millisecond precision lookups.
 
 ```text
        ┌──────────────────────────────┐        ┌──────────────────────────────┐
@@ -33,24 +33,24 @@
        ┌──────────────────────────────────────────────────────────────────────┐
        │                   🧠 MEMORY CELL (Cognitive Core)                    │
        │  ┌────────────────────────────┐      ┌────────────────────────────┐  │
-       │  │ 🌲 Instant Code Graph      │      │ 🏛️ 6-Dimension Knowledge   │  │
-       │  │  • 22 Languages AST Parser │      │  • Living SOPs & Playbooks │  │
+       │  │ ⚡ Code Intelligence Core  │      │ 🏛️ 6-Dimension Knowledge   │  │
+       │  │  • Multi-Language Topology │      │  • Living SOPs & Playbooks │  │
        │  │  • Bidirectional Callsites │ <──> │  • Anti-patterns & Rules   │  │
-       │  │  • Variable Blast Radius   │      │  • Architectural Decisions │  │
+       │  │  • Refactoring Blast Radius│      │  • Architectural Decisions │  │
        │  └────────────────────────────┘      └────────────────────────────┘  │
        └──────────────────────────────────┬───────────────────────────────────┘
                                           ▼
-                      Embedded SQLite + Local Embeddings (100% Offline & Private)
+                      Embedded Engine + Local Embeddings (100% Offline & Private)
 ```
 
 ---
 
 ## 🚀 Key Benefits
 
-- ⚡ **Sub-Millisecond AST Intelligence**: Zero-copy code symbol lookup, bidirectional call hierarchy tracing, and variable reference search across 22 programming languages.
+- ⚡ **Sub-Millisecond Code Intelligence**: Zero-copy code symbol lookup, bidirectional call hierarchy tracing, and variable reference search across 22 programming languages.
 - 📚 **Persistent Living Knowledge**: Preserve engineering methodologies, team conventions, and anti-patterns that survive git branches, session reboots, and agent switches.
 - 🌐 **Learn Once, Apply Everywhere**: Lessons learned while troubleshooting in Cursor or your CLI are instantly accessible to Claude Code or Antigravity.
-- 💰 **Cut LLM Token Usage by 50%~90%**: Grounded AST lookups pinpoint exact functions, structs, and callers, eliminating repetitive full-repo grep scans.
+- 💰 **Cut LLM Token Usage by 50%~90%**: High-precision lookups pinpoint exact functions, structs, and callers, eliminating repetitive full-repo grep scans.
 - 🔄 **Frictionless Session Takeover (`/takeover`)**: Effortlessly transfer working state, uncommitted changes, and active tasks between different agents and IDEs.
 
 ---
@@ -98,7 +98,7 @@ memory-cell init
 
 ## 🌟 Core Capabilities
 
-### 1. 🌲 Code Graph & Instant Symbol Intelligence (22 Languages)
+### 1. ⚡ Deep Code Intelligence & Topological Navigation (22 Languages)
 Deep semantic understanding across 22 major programming languages:
 - `find_symbol("<name>")`: Sub-millisecond lookup of functions, structs, classes, interfaces, and traits.
 - `trace_callers("<symbol>", direction: "callers" | "callees")`: Instant call hierarchy tracing across files without manual searching.
@@ -106,7 +106,7 @@ Deep semantic understanding across 22 major programming languages:
 - `analyze_impact("<symbol>")`: Evaluate blast radius before making critical refactoring changes.
 
 ### 2. 🔄 Autonomous Learning Across 6 Universal Knowledge Dimensions
-Agents autonomously distill experience and preserve knowledge into long-term memory:
+Agents and developers autonomously distill experience and preserve knowledge into long-term memory:
 1. 🛠️ **Workflow**: Verified step-by-step procedures for automated replay.
 2. ⚠️ **Anti-Pattern**: Inhibitory rules that prevent recurring mistakes and hallucinations.
 3. 👤 **Preference**: User/team coding style, architectural constraints, and guidelines.
@@ -157,7 +157,7 @@ memory-cell config distill heuristic
 | :--- | :--- |
 | `memory-cell init` | Zero-config initialization: configure MCP across all IDEs and index codebase |
 | `memory-cell config distill <engine>` | Switch distillation engine (`cli/claude`, `cli`, `heuristic`, `ollama`, `openai`) |
-| `memory-cell sync` | Incrementally re-index workspace code changes into the Code Graph |
+| `memory-cell sync` | Incrementally re-index workspace code changes into the intelligence layer |
 | `memory-cell search <query>` | Unified hybrid search across code symbols, docs, and semantic memory |
 | `memory-cell takeover` | Seamlessly resume working state and goals from previous agent sessions |
 | `memory-cell stats` | Inspect token ROI economics, cognitive health scorecard, and memory engrams |
@@ -169,7 +169,7 @@ memory-cell config distill heuristic
 
 ## 💻 Supported Programming Languages (22 Languages)
 
-Memory Cell provides native, instant symbol and call graph intelligence across 22 major programming languages with zero additional dependencies:
+Memory Cell provides native, instant symbol and call hierarchy intelligence across 22 major programming languages with zero additional dependencies:
 
 | Language | Recognized File Extensions | Primary Capabilities |
 | :--- | :--- | :--- |
