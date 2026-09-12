@@ -199,9 +199,6 @@ print_msg "✅ Binary installed as memory-cell."
 if [ -x "$BIN_PATH" ]; then
     print_msg "\n🧠 Pre-warming Local FastEmbed Model (all-minilm)..."
     "$BIN_PATH" warmup all-minilm || print_msg "${YELLOW}⚠️ FastEmbed warmup skipped (will initialize on first IDE launch).${NC}"
-
-    print_msg "\n🧠 Pre-warming Multilingual NER Model (Meaning Layer Tier 2)..."
-    "$BIN_PATH" warmup ner || print_msg "${YELLOW}⚠️ NER warmup skipped (will initialize on first ingestion, or fall back to Tier 3 heuristics).${NC}"
 fi
 
 # 7. Auto-Configure PATH in ~/.zshrc or ~/.bashrc
