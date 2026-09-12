@@ -19,12 +19,12 @@
 **Memory Cell is a high-performance, 100% private cognitive runtime and deep code intelligence engine.** Unlike heavy external databases or brittle vector-only stores, Memory Cell provides a unified intelligence layer designed for seamless dual-mode usage:
 
 1. 🧑‍💻 **For Developers (Native CLI)**: A lightning-fast, zero-dependency terminal companion to navigate codebase architecture, inspect bidirectional call hierarchies, run semantic reasoning over docs, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) right in your terminal.
-2. 🤖 **For AI Agents (MCP Server)**: A persistent shared brain that gives coding assistants (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**) episodic memory, cross-IDE session handover (`/takeover`), and 50%~90% token savings by replacing wasteful brute-force file scanning with sub-millisecond precision lookups.
+2. 🤖 **For AI Agents (MCP Server)**: A persistent shared brain that gives autonomous agents (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**) episodic memory, cross-agent session handover (`/takeover`), and 50%~90% token savings by replacing wasteful brute-force file scanning with sub-millisecond precision lookups.
 
 ```text
        ┌──────────────────────────────┐        ┌──────────────────────────────┐
-       │   🧑‍💻 Developer Terminal      │        │    🤖 AI Coding Agents       │
-       │   (CLI / Scripts / CI/CD)    │        │  (Cursor, Claude, AGY, ...)  │
+       │   🧑‍💻 Developer Terminal      │        │    🤖 Autonomous AI Agents   │
+       │   (CLI / Scripts / CI/CD)    │        │  (Claude, Cursor, AGY, ...)  │
        └──────────────┬───────────────┘        └──────────────┬───────────────┘
                       │                                       │
                       │ Native CLI Commands                   │ Model Context Protocol (MCP)
@@ -49,9 +49,9 @@
 
 - ⚡ **Sub-Millisecond Code Intelligence**: Zero-copy code symbol lookup, bidirectional call hierarchy tracing, and variable reference search across 22 programming languages.
 - 📚 **Persistent Living Knowledge**: Preserve engineering methodologies, team conventions, and anti-patterns that survive git branches, session reboots, and agent switches.
-- 🌐 **Learn Once, Apply Everywhere**: Lessons learned while troubleshooting in Cursor or your CLI are instantly accessible to Claude Code or Antigravity.
+- 🌐 **Learn Once, Apply Everywhere**: Operational knowledge, problem-solving strategies, and lessons learned with one agent or terminal workflow are instantly accessible across all other connected agents and tools.
 - 💰 **Cut LLM Token Usage by 50%~90%**: High-precision lookups pinpoint exact functions, structs, and callers, eliminating repetitive full-repo grep scans.
-- 🔄 **Frictionless Session Takeover (`/takeover`)**: Effortlessly transfer working state, uncommitted changes, and active tasks between different agents and IDEs.
+- 🔄 **Frictionless Session Takeover (`/takeover`)**: Effortlessly transfer working state, uncommitted changes, and active tasks between different agents, environments, and LLM providers.
 
 ---
 
@@ -114,8 +114,8 @@ Agents and developers autonomously distill experience and preserve knowledge int
 5. 💡 **Concept**: Domain models, entities, and project terminology.
 6. ⚡ **Heuristic**: Fast-and-frugal rules of thumb and optimization shortcuts.
 
-### 3. 🤝 Cross-IDE Working Memory Handover (`takeover`)
-Switching from Cursor to Claude Code? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes your working goal, uncommitted changes, and active debugging trails without losing context.
+### 3. 🤝 Cross-Agent Working Memory Handover (`takeover`)
+Switching between different agents, models, or environments? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes your active goal, execution context, and ongoing tasks without losing state.
 
 ---
 
