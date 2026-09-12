@@ -21,31 +21,19 @@
 
 Despite using frontier models, developers and engineering teams face four painful realities every single day:
 
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                      THE 4 GOVERNANCE DEADLOCKS OF AI MEMORY                           │
-│                                                                                        │
-│  1. 💸 The Amnesia Tax (Paying to Re-explain Everything)                               │
-│     Every new session erases working context. You are forced to repeatedly paste code  │
-│     snippets, re-explain architecture, and burn thousands of tokens just to bring the  │
-│     AI back up to speed, destroying unit economics.                                   │
-│                                                                                        │
-│  2. 🌀 The "Smart but Blind" Dilemma (Local Fixes, Global Breakages)                   │
-│     Agents write great code in isolation, but are completely blind to overall codebase │
-│     topology. They confidently fix function A while silently breaking service B,        │
-│     turning code generation into an endless debugging loop.                            │
-│                                                                                        │
-│  3. 🏝️ The Siloed Agent Island (Zero Cross-Tool Memory Sharing)                        │
-│     Bug fixes and hard-won lessons discovered in Cursor are invisible to Claude Code in│
-│     your terminal. Each tool, model, and teammate operates in complete isolation,     │
-│     repeating the exact same research and troubleshooting from scratch.                │
-│                                                                                        │
-│  4. ⚖️ The Knowledge Governance Void (Unversioned, Stale & Ungoverned Context)         │
-│     Technical specs and ADRs evolve continuously, but vector black boxes cannot         │
-│     surgically prune stale rules. Deprecated patterns poison future runs, with zero    │
-│     line-level audit trails back to authoritative sources.                            │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
+### 🛑 The 4 Governance Deadlocks of AI Memory
+
+1. 💸 **The Amnesia Tax (Paying to Re-explain Everything)**  
+   Every new session erases working context. You are forced to repeatedly paste code snippets, re-explain architecture, and burn thousands of tokens just to bring the AI back up to speed, destroying unit economics.
+
+2. 🌀 **The "Smart but Blind" Dilemma (Local Fixes, Global Breakages)**  
+   Agents write great code in isolation, but are completely blind to overall codebase topology. They confidently fix function A while silently breaking service B, turning code generation into an endless debugging loop.
+
+3. 🏝️ **The Siloed Agent Island (Zero Cross-Tool Memory Sharing)**  
+   Bug fixes and hard-won lessons discovered in Cursor are invisible to Claude Code in your terminal. Each tool, model, and teammate operates in complete isolation, repeating the exact same research and troubleshooting from scratch.
+
+4. ⚖️ **The Knowledge Governance Void (Unversioned, Stale & Ungoverned Context)**  
+   Technical specs and ADRs evolve continuously, but vector black boxes cannot surgically prune stale rules. Deprecated patterns poison future runs, with zero line-level audit trails back to authoritative sources.
 
 ---
 
