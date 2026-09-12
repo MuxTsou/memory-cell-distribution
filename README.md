@@ -1,45 +1,57 @@
 # 🧠 Memory Cell
 
 <p align="center">
-  <strong>The Universal Cognitive Operating System & Shared Intelligence Layer for AI Coding Agents</strong>
+  <strong>The Cognitive Knowledge Engine & AST Code Graph for Developers and AI Agents</strong>
 </p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@muxtsou/memory-cell"><img src="https://img.shields.io/npm/v/@muxtsou/memory-cell?color=blue&style=flat-square" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/@muxtsou/memory-cell"><img src="https://img.shields.io/npm/dm/@muxtsou/memory-cell?style=flat-square" alt="npm downloads" /></a>
   <img src="https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20Windows-brightgreen?style=flat-square" alt="Platforms" />
-  <img src="https://img.shields.io/badge/Protocol-Model%20Context%20Protocol%20(MCP)-orange?style=flat-square" alt="MCP" />
+  <img src="https://img.shields.io/badge/Interface-CLI%20%2B%20MCP-orange?style=flat-square" alt="Interface: CLI + MCP" />
   <img src="https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square" alt="License" />
 </p>
 
 ---
 
-## 💡 Why Memory Cell? (The Universal Intelligence Layer)
+## 💡 What is Memory Cell? (Dual-Mode Intelligence)
 
-In modern agentic software development, **Claude Code, Cursor, Google Antigravity, Hermes Agent, Codex, and GitHub Copilot** operate in silos. Each restart erases their working context, and repeated full-codebase grep scans consume massive token budgets.
+**Memory Cell is a high-performance, 100% private cognitive runtime and AST code graph engine.** It is designed to work seamlessly in two ways:
 
-**Memory Cell acts as the unified, persistent shared brain for all your AI coding agents:**
-
-- 🌐 **Learn Once, Apply Everywhere**: Bug fixes and team conventions learned in Cursor are instantly accessible when you switch to Claude Code or Google Antigravity.
-- ⚡ **Save 50%~90% LLM Context Tokens**: Instant code symbol lookup, bidirectional call hierarchy tracing, and semantic memory replace wasteful brute-force file scanning.
-- 🔄 **Frictionless Session Takeover (`/takeover`)**: Seamlessly transfer state and ongoing tasks between different agents and IDEs without manual re-briefing.
+1. 🧑‍💻 **For Developers (Native CLI)**: A lightning-fast, zero-dependency terminal toolkit to explore codebases, inspect bidirectional call hierarchies, run semantic reasoning over docs, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) right in your terminal.
+2. 🤖 **For AI Agents (MCP Server)**: A unified, shared cognitive layer that gives coding assistants (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**) persistent long-term memory, cross-IDE context handover (`/takeover`), and 50%~90% token savings by replacing wasteful brute-force file scans with grounded AST lookups.
 
 ```text
-       ┌─────────────────────────────────────────────────────────┐
-       │   AI Coding Agents (Antigravity / Cursor / Claude / ...)│
-       └────────────────────────────┬────────────────────────────┘
-                                    │ Model Context Protocol (MCP)
- ┌──────────────────────────────────▼──────────────────────────────────┐
- │                    🧠 MEMORY CELL (Universal Layer)                │
- │  ┌───────────────────────────┐     ┌─────────────────────────────┐  │
- │  │ 🌊 Short-Term Memory      │     │ 🏛️ Long-Term Knowledge      │  │
- │  │  • Real-time turn events  │ ──> │  • 6-dimension memory banks │  │
- │  │  • Active working state   │     │  • Instant codebase graph   │  │
- │  └───────────────────────────┘     └─────────────────────────────┘  │
- └──────────────────────────────────┬──────────────────────────────────┘
-                                    │
-               Local SQLite Engine + Fast Embeddings (100% Private)
+       ┌──────────────────────────────┐        ┌──────────────────────────────┐
+       │   🧑‍💻 Developer Terminal      │        │    🤖 AI Coding Agents       │
+       │   (CLI / Scripts / CI/CD)    │        │  (Cursor, Claude, AGY, ...)  │
+       └──────────────┬───────────────┘        └──────────────┬───────────────┘
+                      │                                       │
+                      │ Native CLI Commands                   │ Model Context Protocol (MCP)
+                      └───────────────────┬───────────────────┘
+                                          ▼
+       ┌──────────────────────────────────────────────────────────────────────┐
+       │                   🧠 MEMORY CELL (Cognitive Core)                    │
+       │  ┌────────────────────────────┐      ┌────────────────────────────┐  │
+       │  │ 🌲 Instant Code Graph      │      │ 🏛️ 6-Dimension Knowledge   │  │
+       │  │  • 22 Languages AST Parser │      │  • Living SOPs & Playbooks │  │
+       │  │  • Bidirectional Callsites │ <──> │  • Anti-patterns & Rules   │  │
+       │  │  • Variable Blast Radius   │      │  • Architectural Decisions │  │
+       │  └────────────────────────────┘      └────────────────────────────┘  │
+       └──────────────────────────────────┬───────────────────────────────────┘
+                                          ▼
+                      Embedded SQLite + Local Embeddings (100% Offline & Private)
 ```
+
+---
+
+## 🚀 Key Benefits
+
+- ⚡ **Sub-Millisecond AST Intelligence**: Zero-copy code symbol lookup, bidirectional call hierarchy tracing, and variable reference search across 22 programming languages.
+- 📚 **Persistent Living Knowledge**: Preserve engineering methodologies, team conventions, and anti-patterns that survive git branches, session reboots, and agent switches.
+- 🌐 **Learn Once, Apply Everywhere**: Lessons learned while troubleshooting in Cursor or your CLI are instantly accessible to Claude Code or Antigravity.
+- 💰 **Cut LLM Token Usage by 50%~90%**: Grounded AST lookups pinpoint exact functions, structs, and callers, eliminating repetitive full-repo grep scans.
+- 🔄 **Frictionless Session Takeover (`/takeover`)**: Effortlessly transfer working state, uncommitted changes, and active tasks between different agents and IDEs.
 
 ---
 
