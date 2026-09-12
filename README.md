@@ -136,15 +136,15 @@ Instant syntax-aware code navigation across 22 major languages in < 15ms P75 loo
 - `analyze_impact("<symbol>")`: Evaluates blast radius and affected call sites before refactoring critical interfaces.
 
 ### 3. 🔄 Autonomous Continuous Learning (Automated Dream Consolidation)
-Developers don't need to manually micromanage knowledge bases or remember individual learning commands. Memory Cell autonomously captures session events, troubleshooting trails, and coding corrections, then consolidates them into long-term structured memory via **Dream Consolidation** (`dream()`):
-- **Episodic ➔ Semantic Consolidation**: Automatically distills raw session logs and interactions into permanent structured engrams across 6 Universal Knowledge Dimensions:
+Zero manual curation or learning commands required. During live development, the **Hippocampus automatically snapshots** fine-grained events, execution trails, and troubleshooting corrections in real time. **Dream Consolidation (`dream()`)** then distills and solidifies these episodic footprints into long-term structured Neocortex knowledge whenever triggered:
+- **Episodic Snapshots ➔ Semantic Engrams**: Distills raw session logs into permanent structured engrams across 6 Universal Knowledge Dimensions:
   - 🛠️ **Workflows & SOPs**: Verified step-by-step procedures distilled from successful tasks for automated replay.
   - ⚠️ **Anti-Patterns & Pitfalls**: Inhibitory guardrails learned from bugs, failed attempts, and user corrections.
   - 👤 **Developer Preferences**: Coding guidelines, project conventions, and stylistic directives.
   - 🏛️ **Architectural Decisions (ADRs)**: Key trade-offs and structural rationale recorded in context.
   - 💡 **Domain Concepts**: Project terminology, mental models, and core entity definitions.
   - ⚡ **Heuristics**: Fast-and-frugal engineering rules of thumb and performance optimizations.
-- **Autonomous Triggering & Sleep Cycles**: Consolidation runs automatically in the background (or via `memory-cell dream`), pruning redundant noise while detecting cross-session contradictions.
+- **On-Demand Wrap-up & Graph Hygiene**: Run `/dream` (or `memory-cell dream`) whenever you wrap up a task or session—safely pruning redundant noise, resolving contradictions, and crystallizing lessons into Git-tracked assets.
 
 ### 4. 🤝 Cross-Agent Working Memory Handover & Episodic Recall
 - `takeover()`: Switching between different agents, models, or IDEs? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes the active goal, obstacle trails, and execution context (<180 tokens) without losing state.
