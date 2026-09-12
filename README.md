@@ -37,7 +37,7 @@ Despite using frontier models, developers and engineering teams face painful rea
 
 ## 💡 The Solution: Memory Cell (Dual-Mode Intelligence)
 
-**Memory Cell solves the memory trilemma through first-principles cognitive governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (Code Topology Pointers), Memory Cell delivers a 100% private, sub-millisecond intelligence layer with zero graph database maintenance overhead. It is designed for seamless dual-mode usage:
+**Memory Cell solves the memory trilemma through first-principles cognitive governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (Code Topology Pointers), Memory Cell delivers a 100% private, < 15ms P75 intelligence layer with zero graph database maintenance overhead. It is designed for seamless dual-mode usage:
 
 1. 🖥️ **When You Work in the Terminal (Native CLI)**: Your lightning-fast, zero-dependency engineering companion to explore codebase architecture, trace bidirectional call flows, query documentation with semantic reasoning, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) directly from your shell.
 2. 🤖 **When You Pair with AI Agents (MCP Mode)**: Your persistent intelligence hub that bridges all your AI assistants (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**). It eliminates repetitive context-setting, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force file scans with precision lookups.
@@ -68,11 +68,20 @@ Despite using frontier models, developers and engineering teams face painful rea
 
 ## 🚀 Key Benefits
 
-- ⚡ **Sub-Millisecond Code Intelligence**: Zero-copy code symbol lookup, bidirectional call hierarchy tracing, and variable reference search across 22 programming languages.
-- 📚 **Persistent Living Knowledge**: Preserve engineering methodologies, team conventions, and anti-patterns that survive git branches, session reboots, and agent switches.
-- 🌐 **Learn Once, Apply Everywhere**: Operational knowledge, problem-solving strategies, and lessons learned with one agent or terminal workflow are instantly accessible across all other connected agents and tools.
-- 💰 **Cut LLM Token Usage by 50%~90%**: High-precision lookups pinpoint exact functions, structs, and callers, eliminating repetitive full-repo grep scans.
-- 🔄 **Frictionless Session Takeover (`/takeover`)**: Effortlessly transfer working state, uncommitted changes, and active tasks between different agents, environments, and LLM providers.
+- ⚡ **< 15ms P75 In-Conversation Retrieval**: Zero-copy code symbol lookup, bidirectional call hierarchy tracing, and variable reference search across 22 programming languages.
+- 🗜️ **50%–90% Token Reduction**: Decoupled reasoning retrieves only the necessary context window without stuffing entire files or brute-forcing vector chunks.
+- 🛡️ **Zero GraphDB Overhead**: Pure embedded SQLite + native Tree-sitter binaries. Zero Neo4j, Redis, or external vector service dependencies.
+- 🌐 **True Cross-Tool Continuity**: Works seamlessly across Claude Code, Cursor, Windsurf, Codex, Gemini, Terminal, and CI/CD pipelines via universal MCP protocols.
+- 🔄 **Git-Native Memory Governance**: Human-readable Living Docs (`docs/` and `.memorycell/`) that commit, branch, and PR alongside your regular code.
+
+---
+
+## 🛠️ MCP Cognitive Tools (For AI Agents)
+
+When configured as an MCP server, Memory Cell exposes powerful cognitive tools that your AI agents use autonomously:
+
+- `reason("<question>")`: Decoupled semantic reasoning that pinpoints active concepts, verified SOPs, architectural decisions, and relevant document sections.
+- `find_symbol("<name>")`: < 15ms P75 lookup of functions, structs, classes, interfaces, and traits.
 
 ---
 
@@ -121,7 +130,7 @@ memory-cell init
 
 ### 1. ⚡ Deep Code Intelligence & Topological Navigation (22 Languages)
 Deep semantic understanding across 22 major programming languages:
-- `find_symbol("<name>")`: Sub-millisecond lookup of functions, structs, classes, interfaces, and traits.
+- `find_symbol("<name>")`: < 15ms P75 lookup of functions, structs, classes, interfaces, and traits.
 - `trace_callers("<symbol>", direction: "callers" | "callees")`: Instant call hierarchy tracing across files without manual searching.
 - `find_references("<identifier>")`: Pinpoint exact declarations, reads, and writes.
 - `analyze_impact("<symbol>")`: Evaluate blast radius before making critical refactoring changes.
