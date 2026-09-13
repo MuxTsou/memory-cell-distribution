@@ -173,14 +173,14 @@ print_msg "\n📦 Installing binary to: ${GREEN}${BIN_PATH}${NC}..."
 if [ -n "$CUSTOM_BINARY_URL" ]; then
     print_msg "⬇️  Downloading from custom URL: ${CUSTOM_BINARY_URL}..."
     curl -fsSL "$CUSTOM_BINARY_URL" -o "$BIN_PATH"
-elif [ -f "dist/memory-cell-$TARGET" ]; then
-    print_msg "ℹ️  Found local architecture binary in dist/ (memory-cell-$TARGET). Copying..."
+elif [ "$USE_LOCAL_BINARY" = "1" ] && [ -f "dist/memory-cell-$TARGET" ]; then
+    print_msg "ℹ️  USE_LOCAL_BINARY=1: Found local architecture binary in dist/ (memory-cell-$TARGET). Copying..."
     cp "dist/memory-cell-$TARGET" "$BIN_PATH"
-elif [ -f "dist/memory-cell-macos-universal" ]; then
-    print_msg "ℹ️  Found local Universal 2 binary in dist/. Copying..."
+elif [ "$USE_LOCAL_BINARY" = "1" ] && [ -f "dist/memory-cell-macos-universal" ]; then
+    print_msg "ℹ️  USE_LOCAL_BINARY=1: Found local Universal 2 binary in dist/. Copying..."
     cp "dist/memory-cell-macos-universal" "$BIN_PATH"
-elif [ -f "target/release/memory-cell" ]; then
-    print_msg "ℹ️  Found local release binary in target/release/. Copying..."
+elif [ "$USE_LOCAL_BINARY" = "1" ] && [ -f "target/release/memory-cell" ]; then
+    print_msg "ℹ️  USE_LOCAL_BINARY=1: Found local release binary in target/release/. Copying..."
     cp "target/release/memory-cell" "$BIN_PATH"
 else
     print_msg "⬇️  Downloading memory-cell-${TARGET} from GitHub Release (${GITHUB_REPO})..."
