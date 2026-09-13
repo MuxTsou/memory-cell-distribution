@@ -17,18 +17,18 @@
 
 ---
 
-## 🤯 Problems & Dilemmas of Agents
+## 🤯 Problems & Dilemmas of Agentic Engineering
 
-To make autonomous agents truly capable, they need **mind, alignment, and continuity**. Yet in reality, teams scaling agents hit 3 fatal bottlenecks every single day:
+To make autonomous agents truly enterprise-grade, they need **mind, alignment, and continuity**. Yet in reality, AI-native startups and engineering teams face 3 fatal bottlenecks every single day:
 
-1. 💸 **"Burning 90% Tokens on Noise: The Cost & Quota Wall" (The Marginal Waste)**  
-   Without precision memory, agents brute-force entire files and histories on every turn. You either hit humiliating weekly usage caps mid-sprint, or burn thousands of dollars on sluggish 30-second context evaluation that destroys product margins.
+1. 💸 **"Burning 90% Tokens on Noise: The Margin & Quota Wall" (The Marginal Waste)**  
+   Without precision memory, agents brute-force entire files, raw directories, and noisy histories on every turn. In development, your team constantly hits humiliating rate limits mid-sprint while suffering 30-second context latency. In production, serving autonomous agents without topological grounding obliterates your unit economics—turning what should be a high-margin product into an unsustainable cloud bill.
 
-2. 🌀 **"Fixed One Function, Silently Broke Three Other Services" (The Blind-Spot Bug)**  
-   Agents write code with supreme confidence, but they can't see beyond the file in front of them. The AI happily renames a parameter or tweaks logic in module A, completely unaware that services B and C depend on it—turning a 2-minute fix into hours of debugging regressions.
+2. 🌀 **"Fixed One Function, Silently Broke Three Downstream Services" (The Blind-Spot Bug)**  
+   LLMs write localized code with supreme confidence, but remain completely blind to repository-wide AST topology. An agent happily refactors an interface or updates a data schema in module A, unaware that 12 downstream call sites across services B and C just broke. Instead of 10x velocity, teams pay an exhausting "AI Debug Tax"—spending hours tracing hidden regressions introduced by a 2-minute prompt.
 
-3. 🏰 **"Millions of Tokens Burned, Zero Knowledge Owned" (The Hostage & Amnesia Trap)**  
-   Hard-won bug fixes, custom architectural invariants, and domain SOPs are held hostage inside closed IDEs and cloud black boxes. Without a sovereign, tool-neutral memory layer, your team's collective intelligence never compounds—it evaporates the moment you switch tools or models, forcing agents to reset to day zero forever.
+3. 🏰 **"Millions of Tokens Burned, Zero Engineering Capital Owned" (The Amnesia Trap)**  
+   Hard-won bug fixes, esoteric domain SOPs, and critical architectural invariants (ADRs) vanish into closed IDE black boxes and ephemeral session windows. Because context doesn't compound, switching between IDEs (Cursor ➔ Claude Code ➔ Antigravity) or starting a new sprint forces your AI back to day zero. Your organization burns millions of tokens, yet never owns a sovereign, compounding intelligence layer.
 
 ---
 
