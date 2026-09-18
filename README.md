@@ -19,16 +19,19 @@
 
 ## 🤯 Problems & Dilemmas of Agentic Engineering
 
-To make autonomous agents truly enterprise-grade, they need **mind, alignment, and continuity**. Yet in reality, AI-native startups and engineering teams face 3 fatal bottlenecks every single day:
+To make autonomous agents truly enterprise-grade, they need **mind, alignment, and continuity**. In modern fully autonomous agent workflows, engineering teams face 4 fatal bottlenecks every single day:
 
-1. 💸 **"Burning 90% Tokens on Noise: The Margin & Quota Wall" (The Marginal Waste)**  
-   Without precision memory, agents brute-force entire files, raw directories, and noisy histories on every turn. In development, your team constantly hits humiliating rate limits mid-sprint while suffering 30-second context latency. In production, serving autonomous agents without topological grounding obliterates your unit economics—turning what should be a high-margin product into an unsustainable cloud bill.
+1. ⏱️ **"Agents Generate 1,000 Lines in 30s, Humans Spend 45m Reviewing: The Verification Bottleneck" (The Review Asymmetry)**  
+   Code generation is now free, but human verification is not. When autonomous agents flood repos with massive PRs, engineers drown in review fatigue. Without an architectural immune layer, 10x generation velocity simply becomes a 10x review bottleneck.
 
-2. 🌀 **"Fixed One Function, Silently Broke Three Downstream Services" (The Blind-Spot Bug)**  
-   LLMs write localized code with supreme confidence, but remain completely blind to repository-wide AST topology. An agent happily refactors an interface or updates a data schema in module A, unaware that 12 downstream call sites across services B and C just broke. Instead of 10x velocity, teams pay an exhausting "AI Debug Tax"—spending hours tracing hidden regressions introduced by a 2-minute prompt.
+2. 💸 **"Burning 90% Tokens on Noise: The Margin & Quota Wall" (The Marginal Waste)**  
+   Without precision memory, autonomous agents brute-force entire files, raw directories, and noisy histories on every turn. In development, your team constantly hits humiliating rate limits mid-sprint while suffering 30-second context latency. In production, serving autonomous agents without topological grounding obliterates your unit economics—turning what should be a high-margin product into an unsustainable cloud bill.
 
-3. 🏰 **"Millions of Tokens Burned, Zero Engineering Capital Owned" (The Amnesia Trap)**  
-   Hard-won bug fixes, esoteric domain SOPs, and critical architectural invariants (ADRs) vanish into closed IDE black boxes and ephemeral session windows. Because context doesn't compound, switching between IDEs (Cursor ➔ Claude Code ➔ Antigravity) or starting a new sprint forces your AI back to day zero. Your organization burns millions of tokens, yet never owns a sovereign, compounding intelligence layer.
+3. 🌀 **"Fixed One Function, Silently Broke Three Downstream Services" (The Blind-Spot Bug)**  
+   Autonomous agents operate with supreme local confidence, but remain completely blind to repository-wide AST topology. An agent happily refactors an interface or updates a data schema in module A, unaware that 12 downstream call sites across services B and C just broke. Instead of 10x velocity, teams pay an exhausting "AI Debug Tax"—spending hours tracing hidden regressions introduced by a 2-minute autonomous prompt.
+
+4. 🏰 **"Millions of Tokens Burned, Zero Engineering Capital Owned" (The Fleet Amnesia)**  
+   Hard-won bug fixes, esoteric domain SOPs, and critical architectural invariants (ADRs) vanish into closed IDE black boxes and ephemeral session windows. Because context doesn't compound across your agent fleet, Agent B makes the exact same catastrophic mistake Agent A fixed yesterday. Your organization burns millions of tokens, yet never owns a sovereign, compounding immune system.
 
 ---
 
@@ -37,7 +40,7 @@ To make autonomous agents truly enterprise-grade, they need **mind, alignment, a
 **Memory Cell solves the memory trilemma through first-principles cognitive governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (Code Topology Pointers), Memory Cell delivers a 100% private, < 15ms P75 intelligence layer with zero graph database maintenance overhead. It is designed for seamless dual-mode usage:
 
 1. 🖥️ **When You Work in the Terminal (Native CLI)**: Your lightning-fast, zero-dependency engineering companion to explore codebase architecture, trace bidirectional call flows, query documentation with semantic reasoning, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) directly from your shell.
-2. 🤖 **When You Pair with AI Agents (MCP Mode)**: Your persistent intelligence hub that bridges all your AI assistants (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**). It eliminates repetitive context-setting, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force file scans with precision lookups.
+2. 🤖 **In Modern Autonomous Agent Workflows (MCP Mode)**: Your persistent intelligence hub that bridges your autonomous coding agents and IDEs (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**). It injects architectural anti-patterns before generation begins, provides instant topological blast-radius checks, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force file scans with precision lookups.
 
 ```text
        ┌──────────────────────────────┐        ┌──────────────────────────────┐
@@ -143,7 +146,7 @@ Zero manual curation or learning commands required. During live development, the
 
 ### 4. 🤝 Cross-Agent Working Memory Handover & Episodic Recall
 - `takeover()`: Switching between different agents, models, or IDEs? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes the active goal, obstacle trails, and execution context (<180 tokens) without losing state.
-- `recall("<query>")`: Recalls chronological episodic timeline logs and debugging history from Hippocampus across past sessions.
+- `recall("<query>")`: Primary historical and episodic memory tool. Recalls chronological timeline logs, completed tasks, previous actions, and debugging history from Hippocampus across past sessions.
 
 ### 5. 🌙 Consolidation & Cognitive Governance
 - `dream(dry_run: false)`: Triggers two-phase consolidation (Hippocampus episodic events ➔ Neocortex structured Engrams + contradiction detection).
