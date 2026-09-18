@@ -13,51 +13,52 @@
   <img src="https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square" alt="License" />
 </p>
 
-> **Mission**: We build the cognitive operating system for governed collective intelligence. By fusing stateful memory, code topological intelligence, and autonomous execution into a unified architecture, we enable developers and networked agents to collectively reason, self-align, and act indefinitely.
+> **Mission**: We build the **universal cognitive operating system** for governed collective intelligence. By turning chaotic reasoning trajectories into permanent, self-healing memory engrams, Memory Cell gives autonomous agents **mind, alignment, and continuity**—proven first in high-stakes software engineering, architected for all autonomous agent domains.
 
 ---
 
-## 🤯 Problems & Dilemmas of Agentic Engineering
+## 🤯 The Crisis of Autonomous Agent Intelligence
 
-To make autonomous agents truly enterprise-grade, they need **mind, alignment, and continuity**. In modern fully autonomous agent workflows, engineering teams face 4 fatal bottlenecks every single day:
+To make autonomous agents truly enterprise-grade, they need **mind, alignment, and continuity**. In modern fully autonomous agent workflows, organizations face 4 fatal cognitive bottlenecks:
 
-1. ⏱️ **"Agents Generate 1,000 Lines in 30s, Humans Spend 45m Reviewing: The Verification Bottleneck" (The Review Asymmetry)**  
+1. ⏱️ **"Agents Generate in 30s, Humans Spend 45m Reviewing: The Verification Bottleneck" (The Review Asymmetry)**  
    Code generation is now free, but human verification is not. When autonomous agents flood repos with massive PRs, engineers drown in review fatigue. Without an architectural immune layer, 10x generation velocity simply becomes a 10x review bottleneck.
 
-2. 💸 **"Burning 90% Tokens on Noise: The Margin & Quota Wall" (The Marginal Waste)**  
-   Without precision memory, autonomous agents brute-force entire files, raw directories, and noisy histories on every turn. In development, your team constantly hits humiliating rate limits mid-sprint while suffering 30-second context latency. In production, serving autonomous agents without topological grounding obliterates your unit economics—turning what should be a high-margin product into an unsustainable cloud bill.
+2. 💸 **"Burning 90% Tokens on Noise: The Context & Margin Wall" (The Marginal Waste)**  
+   Without precision cognitive memory, autonomous agents brute-force entire files, noisy documentation, and raw conversation histories on every turn. In development, teams constantly hit humiliating rate limits and multi-second latency. In production, serving autonomous agents without topological grounding obliterates unit economics—turning what should be a high-margin product into an unsustainable cloud bill.
 
-3. 🌀 **"Fixed One Function, Silently Broke Three Downstream Services" (The Blind-Spot Bug)**  
-   Autonomous agents operate with supreme local confidence, but remain completely blind to repository-wide AST topology. An agent happily refactors an interface or updates a data schema in module A, unaware that 12 downstream call sites across services B and C just broke. Instead of 10x velocity, teams pay an exhausting "AI Debug Tax"—spending hours tracing hidden regressions introduced by a 2-minute autonomous prompt.
+3. 🌀 **"Action in Module A Silently Breaks Dependencies in Module B" (The Blind-Spot Regression)**  
+   Autonomous agents operate with supreme local confidence, but remain completely blind to repository-wide AST topology. An agent refactors an interface or updates a data schema in module A, unaware that downstream call sites across services B and C just broke. Instead of 10x velocity, teams pay an exhausting "AI Debug Tax"—spending hours tracing hidden regressions introduced by a 2-minute autonomous prompt.
 
-4. 🏰 **"Millions of Tokens Burned, Zero Engineering Capital Owned" (The Fleet Amnesia)**  
-   Hard-won bug fixes, esoteric domain SOPs, and critical architectural invariants (ADRs) vanish into closed IDE black boxes and ephemeral session windows. Because context doesn't compound across your agent fleet, Agent B makes the exact same catastrophic mistake Agent A fixed yesterday. Your organization burns millions of tokens, yet never owns a sovereign, compounding immune system.
+4. 🏰 **"Millions of Tokens Burned, Zero Intellectual Capital Owned" (The Fleet Amnesia)**  
+   Hard-won bug fixes, esoteric domain SOPs, and critical architectural invariants vanish into closed IDE black boxes and ephemeral session windows. Because context doesn't compound across your agent fleet, Agent B makes the exact same catastrophic mistake Agent A fixed yesterday. Your organization burns millions of tokens, yet never owns a sovereign, compounding immune system.
 
 ---
 
 ## 💡 The Solution: Memory Cell
 
-**Memory Cell solves the memory trilemma through first-principles cognitive governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (Code Topology Pointers), Memory Cell delivers a 100% private, < 15ms P75 intelligence layer with zero graph database maintenance overhead. It is designed for seamless dual-mode usage:
+**Memory Cell solves the cognitive trilemma through first-principles neuro-symbolic governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (AST & Multi-Modal Topology Pointers), Memory Cell delivers a 100% private, < 15ms P75 cognitive layer with zero graph database maintenance overhead. It operates across two unified surfaces:
 
-1. 🖥️ **When You Work in the Terminal (Native CLI)**: Your lightning-fast, zero-dependency engineering companion to explore codebase architecture, trace bidirectional call flows, query documentation with semantic reasoning, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) directly from your shell.
-2. 🤖 **In Modern Autonomous Agent Workflows (MCP Mode)**: Your persistent intelligence hub that bridges your autonomous coding agents and IDEs (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot**). It injects architectural anti-patterns before generation begins, provides instant topological blast-radius checks, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force file scans with precision lookups.
+1. 🖥️ **Interactive Operator Shell (Native CLI)**: A lightning-fast, zero-dependency engineering companion for human operators to explore system architecture, trace bidirectional call flows, query documentation with semantic reasoning, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) directly from your terminal.
+2. 🤖 **Universal Agent Intelligence (MCP Mode)**: A persistent neural hub bridging your entire autonomous agent fleet (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot, Swarms**). It injects architectural antibodies before generation begins, provides instant causal impact and blast-radius checks after generation, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force scanning with precision topological lookups.
 
 ```text
        ┌──────────────────────────────┐        ┌──────────────────────────────┐
-       │   🖥️ Interactive Terminal     │        │ 🤖 Agentic Pair Programming  │
-       │    (You in Shell / CI/CD)    │        │  (You with Claude, Cursor...)│
+       │   🖥️ Interactive Terminal     │        │ 🤖 Autonomous Agent Workflows│
+       │    (Human Shell / CI/CD)     │        │  (Claude, Cursor, Swarms...) │
        └──────────────┬───────────────┘        └──────────────┬───────────────┘
                       │                                       │
                       │ Native CLI Commands                   │ Model Context Protocol (MCP)
                       └───────────────────┬───────────────────┘
                                           ▼
        ┌──────────────────────────────────────────────────────────────────────┐
-       │                   🧠 MEMORY CELL (Cognitive Core)                    │
+       │                  🧠 MEMORY CELL (Cognitive Core)                     │
        │  ┌────────────────────────────┐      ┌────────────────────────────┐  │
-       │  │ ⚡ Code Intelligence Core  │      │ 🏛️ 6-Dimension Knowledge   │  │
-       │  │  • Multi-Language Topology │      │  • Living SOPs & Playbooks │  │
+       │  │ ⚡ Topological Grounding   │      │ 🏛️ Universal Neocortex     │  │
+       │  │  • Multi-Language AST Map  │      │  • Living SOPs & Playbooks │  │
        │  │  • Bidirectional Callsites │ <──> │  • Anti-patterns & Rules   │  │
        │  │  • Refactoring Blast Radius│      │  • Architectural Decisions │  │
+       │  │  • <0.01ms JIT symbols.idx │      │  • Dreaming Consolidation  │  │
        │  └────────────────────────────┘      └────────────────────────────┘  │
        └──────────────────────────────────┬───────────────────────────────────┘
                                           ▼
