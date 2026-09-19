@@ -37,7 +37,7 @@ To make autonomous agents truly enterprise-grade, they need **mind, alignment, a
 
 ## 💡 The Solution: Memory Cell
 
-**Memory Cell solves the cognitive trilemma through first-principles neuro-symbolic governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (AST & Multi-Modal Topology Pointers), Memory Cell delivers a 100% private, < 15ms P75 cognitive layer with zero graph database maintenance overhead. It operates across two unified surfaces:
+**Memory Cell solves the cognitive trilemma through first-principles neuro-symbolic governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (AST & Multi-Modal Topology Pointers), Memory Cell delivers a 100% private, < 50ms P75 cognitive layer with zero graph database maintenance overhead. It operates across two unified surfaces:
 
 1. 🖥️ **Interactive Operator Shell (Native CLI)**: A lightning-fast, zero-dependency engineering companion for human operators to explore system architecture, trace bidirectional call flows, query documentation with semantic reasoning, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) directly from your terminal.
 2. 🤖 **Universal Agent Intelligence (MCP Mode)**: A persistent neural hub bridging your entire autonomous agent fleet (**Claude Code, Cursor, Google Antigravity, Hermes, Codex, Copilot, Swarms**). It injects architectural antibodies before generation begins, provides instant causal impact and blast-radius checks after generation, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force scanning with precision topological lookups.
@@ -69,7 +69,7 @@ To make autonomous agents truly enterprise-grade, they need **mind, alignment, a
 
 ## 🚀 Key Benefits
 
-- ⚡ **< 15ms P75 In-Conversation Retrieval**: Instant precision grounding across code, living documentation, and shared team playbooks without context lag.
+- ⚡ **< 50ms P75 In-Conversation Retrieval**: Instant precision grounding across code, living documentation, and shared team playbooks without context lag.
 - 🗜️ **50%–90% Token Reduction**: Surgically pinpoints only the relevant lines and sections instead of dumping entire files or flooding context with noisy fragments.
 - 🛡️ **Zero GraphDB Overhead**: Pure embedded SQLite architecture. Zero Neo4j, Redis, or external vector service dependencies.
 - 🌐 **True Cross-Tool Continuity**: Works seamlessly across Claude Code, Cursor, Windsurf, Codex, Gemini, Terminal, and CI/CD pipelines via universal MCP protocols.
