@@ -233,44 +233,14 @@ if [ -n "$SHELL_RC" ] && [ -f "$SHELL_RC" ]; then
     fi
 fi
 
-# 7. Auto-Configure Global Standalone Apps (e.g. Claude Desktop)
-if [ "$OS" = "Darwin" ]; then
-    CLAUDE_DIR="$HOME/Library/Application Support/Claude"
-else
-    CLAUDE_DIR="$HOME/.config/Claude"
-fi
-CLAUDE_CONFIG="$CLAUDE_DIR/claude_desktop_config.json"
-
-if [ -d "$CLAUDE_DIR" ] || [ -f "$CLAUDE_CONFIG" ]; then
-    python3 -c "
-import json, os
-path = '$CLAUDE_CONFIG'
-os.makedirs(os.path.dirname(path), exist_ok=True)
-try:
-    with open(path, 'r') as f:
-        data = json.load(f)
-except Exception:
-    data = {}
-
-if 'mcpServers' not in data:
-    data['mcpServers'] = {}
-
-data['mcpServers']['memory-cell'] = {
-    'command': '$BIN_PATH',
-    'args': ['--db', '$DB_PATH'],
-    'env': {
-        'MEMORY_CELL_USER': '$DETECTED_USER',
-        'MEMORY_CELL_ROLE': '$DEFAULT_ROLE'
-    }
-}
-
-with open(path, 'w') as f:
-    json.dump(data, f, indent=2)
-" 2>/dev/null || true
-    print_msg "  ${GREEN}✅ Claude Desktop App${NC} -> Configured (${CLAUDE_CONFIG})"
-fi
-
 # 8. Workspace Initialization (Delegated to memory-cell init)
+if [ ! -x "$BIN_PATH" ]; then
+    print_msg "${RED}❌ Error: memory-cell binary is missing or not executable at ${BIN_PATH}.${NC}"
+    print_msg "${YELLOW}💡 It was present moments ago (warmup succeeded above) but has since disappeared -- most likely removed or replaced by another process (e.g. an IDE/MCP client launching it concurrently). Re-run this installer, or restore it manually:${NC}"
+    print_msg "   ${CYAN}curl -fSL -o \"$BIN_PATH\" \"$RELEASE_DOWNLOAD_URL\" && chmod +x \"$BIN_PATH\"${NC}"
+    exit 1
+fi
+
 CURRENT_WORKSPACE="$(pwd)"
 
 if [ "$NON_INTERACTIVE" = true ]; then
@@ -319,6 +289,43 @@ else
             fi
             ;;
     esac
+fi
+
+# 9. Auto-Configure Global Standalone Apps (e.g. Claude Desktop)
+if [ "$OS" = "Darwin" ]; then
+    CLAUDE_DIR="$HOME/Library/Application Support/Claude"
+else
+    CLAUDE_DIR="$HOME/.config/Claude"
+fi
+CLAUDE_CONFIG="$CLAUDE_DIR/claude_desktop_config.json"
+
+if [ -d "$CLAUDE_DIR" ] || [ -f "$CLAUDE_CONFIG" ]; then
+    python3 -c "
+import json, os
+path = '$CLAUDE_CONFIG'
+os.makedirs(os.path.dirname(path), exist_ok=True)
+try:
+    with open(path, 'r') as f:
+        data = json.load(f)
+except Exception:
+    data = {}
+
+if 'mcpServers' not in data:
+    data['mcpServers'] = {}
+
+data['mcpServers']['memory-cell'] = {
+    'command': '$BIN_PATH',
+    'args': ['--db', '$DB_PATH'],
+    'env': {
+        'MEMORY_CELL_USER': '$DETECTED_USER',
+        'MEMORY_CELL_ROLE': '$DEFAULT_ROLE'
+    }
+}
+
+with open(path, 'w') as f:
+    json.dump(data, f, indent=2)
+" 2>/dev/null || true
+    print_msg "  ${GREEN}✅ Claude Desktop App${NC} -> Configured (${CLAUDE_CONFIG})"
 fi
 
 print_msg "\n${GREEN}======================================================${NC}"
