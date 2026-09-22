@@ -184,10 +184,27 @@ elif [ "$USE_LOCAL_BINARY" = "1" ] && [ -f "target/release/memory-cell" ]; then
     cp "target/release/memory-cell" "$BIN_PATH"
 else
     print_msg "⬇️  Downloading memory-cell-${TARGET} from GitHub Release (${GITHUB_REPO})..."
-    if curl -fsSL -L "$RELEASE_DOWNLOAD_URL" -o "$BIN_PATH"; then
+    TMP_BIN_PATH="${BIN_PATH}.download.tmp"
+    DOWNLOAD_OK=false
+    for attempt in 1 2 3; do
+        rm -f "$TMP_BIN_PATH"
+        if curl -fsSL --connect-timeout 15 --max-time 300 --retry 2 --retry-delay 2 --retry-connrefused \
+            "$RELEASE_DOWNLOAD_URL" -o "$TMP_BIN_PATH"; then
+            DOWNLOAD_OK=true
+            break
+        fi
+        print_msg "${YELLOW}⚠️  Download attempt ${attempt}/3 failed or was interrupted. Retrying...${NC}"
+        sleep 2
+    done
+
+    if [ "$DOWNLOAD_OK" = true ] && [ -s "$TMP_BIN_PATH" ]; then
+        mv "$TMP_BIN_PATH" "$BIN_PATH"
         print_msg "✅ Successfully downloaded binary from GitHub Release."
     else
-        print_msg "${RED}❌ Error: Failed to download binary from ${RELEASE_DOWNLOAD_URL}${NC}"
+        rm -f "$TMP_BIN_PATH"
+        print_msg "${RED}❌ Error: Failed to download binary from ${RELEASE_DOWNLOAD_URL} after 3 attempts.${NC}"
+        print_msg "${YELLOW}💡 This is usually caused by an unstable connection (mobile hotspot, VPN drop, Wi-Fi handoff). Try again on a stable network, or download manually:${NC}"
+        print_msg "   ${CYAN}curl -fSL -o \"$BIN_PATH\" \"$RELEASE_DOWNLOAD_URL\" && chmod +x \"$BIN_PATH\"${NC}"
         exit 1
     fi
 fi
