@@ -210,7 +210,7 @@ memory-cell config distill heuristic
 | :--- | :--- |
 | `memory-cell init` | Zero-config initialization: configure MCP across all IDEs and index codebase |
 | `memory-cell config distill <engine>` | Switch distillation engine (`cli/claude`, `cli`, `heuristic`, `ollama`, `openai`) |
-| `memory-cell sync` | Incrementally re-index workspace code changes into the intelligence layer |
+| `memory-cell sync` | Incrementally re-index workspace changes, and extract entities and facts from changed documents (calls your configured model; background sync stores text only) |
 | `memory-cell search <query>` | Unified hybrid search across code symbols, docs, and semantic memory |
 | `memory-cell takeover` | Seamlessly resume working state and goals from previous agent sessions |
 | `memory-cell stats` | Inspect token ROI economics, cognitive health scorecard, and memory engrams |
