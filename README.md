@@ -216,6 +216,7 @@ memory-cell config distill heuristic
 | `memory-cell stats` | Inspect token ROI economics, cognitive health scorecard, and memory engrams |
 | `memory-cell doctor` | Validate local embedding models, storage integrity, and IDE MCP links |
 | `memory-cell dream` | Consolidate session events into long-term structured knowledge |
+| `memory-cell audit` | Offline, read-only scan of local Claude Code, Codex, Antigravity and OpenCode logs: repeated mistakes, risky writes, API-equivalent retry cost (`--output json`, `--since 30d`) |
 | `memory-cell uninstall` | Cleanly remove binary, IDE configurations, and injected rules |
 
 ---
