@@ -88,25 +88,27 @@ curl -fsSL https://raw.githubusercontent.com/muxtsou/memory-cell-distribution/ma
 ```
 
 ### Option 2: npm Package
-Install globally or run on demand with `npx`:
+Install globally so IDE hooks can invoke `memory-cell` on your `PATH`:
 
 ```bash
-# Global installation
+# Global installation (recommended for npm users)
 npm install -g @muxtsou/memory-cell
 
-# Or instant zero-install
-npx @muxtsou/memory-cell init
+# One-off CLI commands without global install (e.g. audit or search)
+npx @muxtsou/memory-cell audit
 ```
 
 ---
 
 ## ⚡ 10-Second Quickstart (Zero-Config)
 
-Run directly inside any project repository root:
+Run directly inside any project repository root (zero prompts by default; pass `--interactive` for the guided wizard):
 
 ```bash
 memory-cell init
 ```
+
+Memory Cell automatically detects installed AI tools, binds your workspace, auto-selects a working distillation backend (API key -> logged-in local CLI agent such as `claude`/`codex`/`gemini`/`agy` -> offline `heuristic`), and never creates or modifies `.env`.
 
 ✨ **Automatically detects and provisions MCP tools, life-cycle hooks, and agent skills across your development stack:**
 - **Anthropic Claude**: Claude Code CLI
@@ -220,13 +222,13 @@ memory-cell config distill heuristic
 
 | Command | Description |
 | :--- | :--- |
-| `memory-cell init` | Zero-config initialization: configure MCP across all IDEs and index codebase |
+| `memory-cell init` | Zero-prompt initialization: download/warm embedding model once (`--skip-warmup` to defer), sync workspace docs & JIT/Code Graph with progress bars, configure IDEs, and auto-select distillation backend (`--interactive` for wizard) |
 | `memory-cell config distill <engine>` | Switch distillation engine (`cli/claude`, `cli`, `heuristic`, `ollama`, `openai`) |
 | `memory-cell sync` | Incrementally re-index workspace changes, and extract entities and facts from changed documents (calls your configured model; background sync stores text only) |
 | `memory-cell search <query>` | Unified hybrid search across code symbols, docs, and semantic memory |
 | `memory-cell takeover` | Seamlessly resume working state and goals from previous agent sessions |
 | `memory-cell stats` | Inspect token ROI economics, cognitive health scorecard, and memory engrams |
-| `memory-cell doctor` | Validate local embedding models, storage integrity, and IDE MCP links |
+| `memory-cell doctor` | Validate `PATH` binary, workspace & IDE MCP configs, SQLite storage, embedding cache, and distillation backend |
 | `memory-cell dream` | Consolidate session events into long-term structured knowledge |
 | `memory-cell audit` | Offline, read-only scan of local Claude Code, Codex, Antigravity and OpenCode logs: repeated mistakes, risky writes, API-equivalent retry cost (`--output json`, `--since 30d`) |
 | `memory-cell uninstall` | Cleanly remove binary, IDE configurations, and injected rules |
