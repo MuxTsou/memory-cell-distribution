@@ -1,11 +1,11 @@
-# 🧠 Memory Cell
+# Memory Cell
 
-<p align="center">
-  <strong>Reinvent Cognition.</strong><br>
-  <em>To give autonomous agents mind, alignment, and continuity.</em>
-</p>
+**Reinvent Cognition.**  
+*Built for AI-native companies and autonomous agent builders — giving agents mind, alignment, and continuity across every session, tool, and teammate.*
 
-<p align="center">
+Local-first memory engine and structural grounding layer for autonomous agents. Proven first in high-stakes software engineering, architected for all autonomous agent domains — packaged as a single Rust binary with embedded SQLite and zero API keys required.
+
+<p align="left">
   <a href="https://www.npmjs.com/package/@muxtsou/memory-cell"><img src="https://img.shields.io/npm/v/@muxtsou/memory-cell?color=blue&style=flat-square" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/@muxtsou/memory-cell"><img src="https://img.shields.io/npm/dm/@muxtsou/memory-cell?style=flat-square" alt="npm downloads" /></a>
   <img src="https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20Windows-brightgreen?style=flat-square" alt="Platforms" />
@@ -13,233 +13,218 @@
   <img src="https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square" alt="License" />
 </p>
 
-> **Mission**: We build the **universal cognitive operating system** for governed collective intelligence. By turning chaotic reasoning trajectories into permanent, self-healing memory engrams, Memory Cell gives autonomous agents **mind, alignment, and continuity**—proven first in high-stakes software engineering, architected for all autonomous agent domains.
+- **Mind — Agents stop repeating yesterday's mistakes**: Distills execution trails, pitfalls, workflows, and decisions into durable, Git-tracked Markdown in `.memory/` and surfaces them before the next task.
+- **Alignment — Actions stay grounded in real structure**: Anchors agent reasoning to physical documents and 22-language tree-sitter AST symbol/call graphs (`find_symbol`, `trace_callers`, `analyze_impact`) so changes do not silently break dependencies.
+- **Continuity — Switching tools or compacting context never resets progress**: Connects via native MCP and lifecycle hooks across Claude Code, Cursor, Antigravity, Codex, Copilot, Devin, Windsurf, OpenCode, Hermes, and custom agent workflows; resume any session with `/takeover`.
 
 ---
 
-## 🤯 The Crisis of Autonomous Agent Intelligence
+## Quick Install
 
-To make autonomous agents truly enterprise-grade, they need **mind, alignment, and continuity**. In modern fully autonomous agent workflows, organizations face 4 fatal cognitive bottlenecks:
-
-1. ⏱️ **"Agents Generate in 30s, Humans Spend 45m Reviewing: The Verification Bottleneck" (The Review Asymmetry)**  
-   Code generation is now free, but human verification is not. When autonomous agents flood repos with massive PRs, engineers drown in review fatigue. Without an architectural immune layer, 10x generation velocity simply becomes a 10x review bottleneck.
-
-2. 💸 **"Burning 90% Tokens on Noise: The Context & Margin Wall" (The Marginal Waste)**  
-   Without precision cognitive memory, autonomous agents brute-force entire files, noisy documentation, and raw conversation histories on every turn. In development, teams constantly hit humiliating rate limits and multi-second latency. In production, serving autonomous agents without topological grounding obliterates unit economics—turning what should be a high-margin product into an unsustainable cloud bill.
-
-3. 🌀 **"Action in Module A Silently Breaks Dependencies in Module B" (The Blind-Spot Regression)**  
-   Autonomous agents operate with supreme local confidence, but remain completely blind to repository-wide AST topology. An agent refactors an interface or updates a data schema in module A, unaware that downstream call sites across services B and C just broke. Instead of 10x velocity, teams pay an exhausting "AI Debug Tax"—spending hours tracing hidden regressions introduced by a 2-minute autonomous prompt.
-
-4. 🏰 **"Millions of Tokens Burned, Zero Intellectual Capital Owned" (The Fleet Amnesia)**  
-   Hard-won bug fixes, esoteric domain SOPs, and critical architectural invariants vanish into closed IDE black boxes and ephemeral session windows. Because context doesn't compound across your agent fleet, Agent B makes the exact same catastrophic mistake Agent A fixed yesterday. Your organization burns millions of tokens, yet never owns a sovereign, compounding immune system.
-
----
-
-## 💡 The Solution: Memory Cell
-
-**Memory Cell solves the cognitive trilemma through first-principles neuro-symbolic governance.** By decoupling **Knowledge** (Git-native Living Docs), **Meaning** (Semantic Engrams), and **Location** (AST & Multi-Modal Topology Pointers), Memory Cell delivers a 100% private, < 50ms P75 cognitive layer with zero graph database maintenance overhead. It operates across two unified surfaces:
-
-1. 🖥️ **Interactive Operator Shell (Native CLI)**: A lightning-fast, zero-dependency engineering companion for human operators to explore system architecture, trace bidirectional call flows, query documentation with semantic reasoning, and maintain persistent engineering playbooks (ADRs, anti-patterns, workflows) directly from your terminal.
-2. 🤖 **Universal Agent Intelligence (MCP Mode)**: A persistent neural hub bridging your entire autonomous agent fleet (**Claude Code, Cursor, Google Antigravity, GitHub Copilot, Codex, Devin, Windsurf, OpenCode, Hermes**). It injects architectural antibodies before generation begins, provides instant causal impact and blast-radius checks after generation, enables frictionless session handover (`/takeover`), and cuts 50%~90% token waste by replacing brute-force scanning with precision topological lookups.
-
-```text
-       ┌──────────────────────────────┐        ┌──────────────────────────────┐
-       │   🖥️ Interactive Terminal     │        │ 🤖 Autonomous Agent Workflows│
-       │    (Human Shell / CI/CD)     │        │  (Claude, Cursor, Swarms...) │
-       └──────────────┬───────────────┘        └──────────────┬───────────────┘
-                      │                                       │
-                      │ Native CLI Commands                   │ Model Context Protocol (MCP)
-                      └───────────────────┬───────────────────┘
-                                          ▼
-       ┌──────────────────────────────────────────────────────────────────────┐
-       │                  🧠 MEMORY CELL (Cognitive Core)                     │
-       │  ┌────────────────────────────┐      ┌────────────────────────────┐  │
-       │  │ ⚡ Topological Grounding   │      │ 🏛️ Universal Neocortex     │  │
-       │  │  • Multi-Language AST Map  │      │  • Living SOPs & Playbooks │  │
-       │  │  • Bidirectional Callsites │ <──> │  • Anti-patterns & Rules   │  │
-       │  │  • Refactoring Blast Radius│      │  • Architectural Decisions │  │
-       │  │  • <0.01ms JIT symbols.idx │      │  • Dreaming Consolidation  │  │
-       │  └────────────────────────────┘      └────────────────────────────┘  │
-       └──────────────────────────────────┬───────────────────────────────────┘
-                                          ▼
-                      Embedded Engine + Local Embeddings (100% Offline & Private)
-```
-
----
-
-## 🚀 Key Benefits
-
-- ⚡ **< 50ms P75 In-Conversation Retrieval**: Instant precision grounding across code, living documentation, and shared team playbooks without context lag.
-- 🗜️ **50%–90% Token Reduction**: Surgically pinpoints only the relevant lines and sections instead of dumping entire files or flooding context with noisy fragments.
-- 🛡️ **Zero GraphDB Overhead**: Pure embedded SQLite architecture. Zero Neo4j, Redis, or external vector service dependencies.
-- 🌐 **True Cross-Tool Continuity**: Works seamlessly across Claude Code, Cursor, Google Antigravity, GitHub Copilot, Codex, Devin, Windsurf, OpenCode, Hermes, Terminal, and CI/CD pipelines via universal MCP protocols.
-- 🔄 **Zero-Friction Living Knowledge**: Edit any markdown file or code in your repo as usual. Memory Cell automatically hot-syncs changes and prunes deleted files in real-time.
-
----
-
-
-## 📦 Installation Options
-
-### Option 1: One-Line Installer (Recommended, Zero-Dependency)
-No Node.js or build tools required. Directly installs the pre-compiled native binary for your OS and architecture:
+### macOS & Linux (One-Line Installer)
+No Node.js or Rust toolchain required:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/muxtsou/memory-cell-distribution/main/install.sh | bash
 ```
 
-### Option 2: npm Package
-Install globally so IDE hooks can invoke `memory-cell` on your `PATH`:
+### npm (macOS, Linux, Windows)
+Install globally so IDE hooks can invoke `memory-cell` on your `PATH`, then initialize inside your repository root:
 
 ```bash
-# Global installation (recommended for npm users)
 npm install -g @muxtsou/memory-cell
-
-# One-off CLI commands without global install (e.g. audit or search)
-npx @muxtsou/memory-cell audit
-```
-
----
-
-## ⚡ 10-Second Quickstart (Zero-Config)
-
-Run directly inside any project repository root (zero prompts by default; pass `--interactive` for the guided wizard):
-
-```bash
 memory-cell init
 ```
 
-Memory Cell automatically detects installed AI tools, binds your workspace, auto-selects a working distillation backend (API key -> logged-in local CLI agent such as `claude`/`codex`/`gemini`/`agy` -> offline `heuristic`), and never creates or modifies `.env`.
-
-✨ **Automatically detects and provisions MCP tools, life-cycle hooks, and agent skills across your development stack:**
-- **Anthropic Claude**: Claude Code CLI
-- **Google Antigravity**: Antigravity IDE, Antigravity CLI (`agy`)
-- **AI-Native IDEs**: Cursor, Windsurf
-- **VS Code Ecosystem**: GitHub Copilot (VS Code)
-- **Coding Agents**: OpenAI Codex (CLI & app), Devin (Desktop & CLI), OpenCode, Hermes Agent (CLI & TUI)
-
-| Platform | What `init` sets up |
-| :--- | :--- |
-| Claude Code | MCP server, hooks, slash commands |
-| Google Antigravity | MCP server, hooks, skills |
-| Cursor | MCP server, hooks, rules |
-| GitHub Copilot (VS Code) | MCP server, hooks |
-| OpenAI Codex | MCP server, hooks (approve once via `/hooks`, or Settings > Hooks in the app) |
-| Devin | MCP server, hooks |
-| OpenCode | MCP server, plugin, instructions (restart OpenCode to load the plugin) |
-| Hermes Agent | MCP server, hooks (run `hermes` once to approve them, or pass `--accept-hooks`); Hermes One is not supported |
-| Windsurf | MCP server |
+`memory-cell init` runs zero-prompt by default (pass `--interactive` for the guided wizard). It downloads and warms the local embedding model (`multilingual-e5-small`) once on first run, syncs your project docs and AST index with live progress bars, configures detected IDEs, and auto-selects a working distillation backend without creating or modifying `.env`.
 
 ---
 
-## 🛠️ MCP Cognitive Tools (For AI Agents)
+## Who It's Built For
 
-Memory Cell equips coding agents with a structured cognitive layer composed of specialized tools that replace noisy brute-force file scanning with surgical, token-efficient intelligence:
+Memory Cell is designed for **AI-native companies** where autonomous agents are no longer an occasional autocomplete, but part of daily execution:
 
-### 1. 🧠 Grounded Reasoning & Unified Search (Cognitive Retrieval)
-- `reason("<query>", workspace_path: ".")`: **Grounding Engine.** Retrieves structured document sections, active domain concepts, verified workflows, and architectural rules without reading raw files or blowing context tokens.
-- `search("<query>")`: **Holographic Search.** Concurrently queries code symbols (`find_symbol`) and long-term memory (`reason`), synthesizing verified code locations and living docs into a single high-density context.
-- `ingest(file_path: "...")`: Ingests documents (Markdown, Code, PDF) through the zero-leakage cognitive pipeline into memory.
-- `forget(id: "...")`: Removes obsolete engrams and their associated living doc from disk.
-
-### 2. ⚡ Deep Code Intelligence & Topological Navigation (22 Languages)
-Instant syntax-aware code navigation across 22 major languages in < 15ms P75 lookup:
-- `find_symbol("<name>")`: Pinpoints functions, structs, classes, interfaces, traits, and exact line definitions.
-- `trace_callers("<symbol>", direction: "callers" | "callees")`: Bidirectional call hierarchy tracing across files without manual searching.
-- `find_references("<identifier>")`: Locates exact declarations, reads, and writes for variables and fields.
-- `analyze_impact("<symbol>")`: Evaluates blast radius and affected call sites before refactoring critical interfaces.
-
-### 3. 🔄 Autonomous Continuous Learning (Automated Dream Consolidation)
-Zero manual curation or learning commands required. During live development, the **Hippocampus automatically snapshots** fine-grained events, execution trails, and troubleshooting corrections in real time. **Dream Consolidation (`dream()`)** then distills and solidifies these episodic footprints into long-term structured Neocortex knowledge whenever triggered:
-- **Episodic Snapshots ➔ Semantic Engrams**: Distills raw session logs into permanent structured engrams across 6 Universal Knowledge Dimensions:
-  - 🛠️ **Workflows & SOPs**: Verified step-by-step procedures distilled from successful tasks for automated replay.
-  - ⚠️ **Anti-Patterns & Pitfalls**: Inhibitory guardrails learned from bugs, failed attempts, and user corrections.
-  - 👤 **Developer Preferences**: Coding guidelines, project conventions, and stylistic directives.
-  - 🏛️ **Architectural Decisions (ADRs)**: Key trade-offs and structural rationale recorded in context.
-  - 💡 **Domain Concepts**: Project terminology, mental models, and core entity definitions.
-  - ⚡ **Heuristics**: Fast-and-frugal engineering rules of thumb and performance optimizations.
-- **On-Demand Wrap-up & Graph Hygiene**: Run `/dream` (or `memory-cell dream`) whenever you wrap up a task or session—safely pruning redundant noise, resolving contradictions, and crystallizing lessons into Git-tracked assets.
-
-### 4. 🤝 Cross-Agent Working Memory Handover & Episodic Recall
-- `takeover()`: Switching between different agents, models, or IDEs? Run `/takeover` (or `memory-cell takeover`). The next agent instantly resumes the active goal, obstacle trails, and execution context (<180 tokens) without losing state.
-- `recall("<query>")`: Primary historical and episodic memory tool. Recalls chronological timeline logs, completed tasks, previous actions, and debugging history from Hippocampus across past sessions.
-
-### 5. 🌙 Consolidation & Cognitive Governance
-- `dream(dry_run: false)`: Triggers two-phase consolidation (Hippocampus episodic events ➔ Neocortex structured Engrams + contradiction detection).
-- `list_governance_tickets()`: Lists knowledge contradictions flagged during consolidation.
-- `resolve_governance_ticket(ticket_id, action)`: Human-in-the-loop conflict resolution (supersede, inhibit, or ignore).
-- `stats()`: Real-time token savings, cognitive health scorecards, and managed engram distribution.
-
----
-
-## ⚡ Agent Skills & Slash Commands (Zero-Friction UX)
-
-`memory-cell init` automatically provisions specialized agent skills and slash commands across all your IDEs and CLI agents (Google Antigravity, Claude Code, Cursor, Codex). Agents proactively load these workflows or you can invoke them directly:
-
-| Slash Command | Agent Skill | Capability & Description |
+| Target Audience | Real-World Scenario | What Memory Cell Solves |
 | :--- | :--- | :--- |
-| `/takeover` | `takeover` | **Instant Cross-Tool Handover.** Resumes working memory, active subgoals, and obstacles across IDEs in < 180 tokens without manual briefing. |
-| `/dream` | `dream` | **Consolidation & Graph Hygiene.** Runs two-phase consolidation to distill raw episodic sessions into permanent Neocortex knowledge and resolve contradictions. |
-| `/memorize` | `memorize` | **Explicit Knowledge Persistence.** Quickly captures and classifies critical lessons, SOPs, or rules into `.memory/` across 6 dimensions. |
-| `/impact <symbol>` | `impact` | **Blast Radius Evaluation.** Inspects call hierarchies and calculates risk before refactoring critical functions, structs, or traits. |
-| `/recall <query>` | `recall` | **Episodic Timeline Explorer.** Queries chronological debugging trails and past session decisions with forward-timeline synthesis. |
-| `/stats` | `stats` | **Cognitive Health & ROI Scorecard.** Displays managed engram distribution, duplicate filter ratio, and total context token savings. |
+| **AI-Native Engineering Teams (5–25+ engineers)** | Everyone ships daily with Claude Code, Cursor, Antigravity, Codex, or Devin. Agent A breaks Agent B's module, and the same bug shows up in PR reviews every week. | Anchors changes to 22-language AST call graphs (`analyze_impact`, `trace_callers`) and shares verified `.memory/` rules, workflows, and anti-patterns across the team via Git. |
+| **Autonomous Agent & AI Product Builders** | You are building multi-agent or domain workflows (research, ops, technical/legal/financial docs) that need persistent memory without maintaining Neo4j or burning tokens on raw RAG dumps. | Provides a local-first, auditable memory engine over native MCP (embedded SQLite + Git-tracked Markdown) that turns execution trails into structured, reusable knowledge. |
+| **Multi-Tool Power Users** | You switch between IDE agents and terminal CLIs all day, or hit `/compact` mid-task and lose all working context. | Lifecycle hooks snapshot session trails automatically; `/takeover` resumes goals and progress across tools with zero API keys required. |
 
 ---
 
-## 🧠 Distillation Engine Configuration (Zero-API-Key with Claude Max)
+## What Changes in Daily Work
 
-Memory Cell uses an intelligent distillation engine to synthesize session events into long-term structured knowledge. You don't need a separate paid API key if you have a Claude subscription (Claude Pro / Max) or local tools:
+| Everyday Friction | Without Memory Cell | With Memory Cell |
+| :--- | :--- | :--- |
+| **Repeated bug / pitfall** | You explain the same workaround again in the next chat. | Recorded in `.memory/anti_patterns/` and surfaced automatically on related prompts. |
+| **Cross-file refactoring** | Agent greps loosely and misses downstream callers. | `find_symbol`, `trace_callers`, and `analyze_impact` map exact definitions and call sites from the AST graph. |
+| **`/compact` or IDE switch** | Context resets; you manually re-brief the new session. | Hooks snapshot session progress; `/takeover` resumes active goals and trails across tools. |
+| **Reading project docs & code** | Agent dumps whole files into context just to find one rule or function. | `reason` and `search` return grounded document sections, rules, and exact symbol locations. |
 
-### Recommended: Use Your Existing Claude CLI (No API Key Required)
-If you already use Claude Code CLI with your Claude Max / Pro plan, Memory Cell can reuse your authenticated CLI directly:
-```bash
-memory-cell config distill cli/claude
-```
-This lets you run distillation without incurring extra API costs or exposing API keys!
+### What Setup Looks Like
 
-### Alternative Distillation Engines:
-Switch engines anytime with a single command:
-```bash
-# Auto-detect any logged-in local CLI agent (claude, codex, gemini)
-memory-cell config distill cli
+```text
+$ memory-cell init
+✅ Embedding model ready (384d, 3820ms)
+Syncing docs  [████████████████████] 4/4 (100%) README.md
+Indexing code [████████████████████] 28/28 (100%) main.rs
+✅ Initialized my-app (antigravity, cursor, claude · cli/claude (no API key) · 4 docs, 312 AST nodes)
+Next: Reload your IDE window to connect MCP
 
-# Local Ollama (Auto-detects installed models, 100% private)
-memory-cell config distill ollama
+$ memory-cell doctor
+memory-cell doctor  ~/code/my-app
 
-# Cloud APIs (Requires API key in .env)
-memory-cell config distill anthropic   # Claude 3.5 Haiku
-memory-cell config distill openai      # GPT-4o-mini
-memory-cell config distill gemini      # Gemini 2.5/3.7 Flash
-memory-cell config distill groq        # Groq LPU (Ultra-fast)
+✅ Binary        ~/.local/bin/memory-cell
+✅ Workspace     antigravity, cursor, claude
+✅ Database      ~/.memory_cell/global.sqlite3
+✅ Model cache   warm (multilingual-e5-small)
+✅ Index         synced (312 AST nodes, 540 synapses)
+✅ Distillation  cli/claude (~/.local/bin/claude, no API key required)
 
-# ⚡ Fast Offline Fallback (Zero-LLM, rule-based; instant but basic quality)
-memory-cell config distill heuristic
+✅ Healthy (0 issues).
 ```
 
 ---
 
-## 🛠️ CLI Quick Reference
+## Why Not Just `.cursorrules`, Bigger Context, or Vector RAG?
+
+| Approach | Where It Falls Short | How Memory Cell Handles It |
+| :--- | :--- | :--- |
+| **Bigger context windows** | Dumping raw files dilutes attention, slows every turn, and still resets when a session ends. | Retrieves only the relevant AST symbols, call sites, and `.memory/` entries needed for the current question. |
+| **Vector RAG alone** | Code is a syntax tree, not prose. Embedding similarity misses exact callers and goes stale after edits. | Combines local embeddings for docs/memories with exact tree-sitter AST symbol and call-graph lookups. |
+| **Static `.cursorrules` / `CLAUDE.md`** | Hand-written rule files go stale quickly and cannot track session history, call graphs, or cross-IDE handover. | Auto-captures session trails via hooks, consolidates them into structured `.memory/` Markdown via `/dream`, and syncs incrementally on file changes. |
+
+---
+
+## How It Works
+
+Memory Cell runs 100% locally on your machine with no Docker containers, external vector databases, or cloud accounts:
+
+- **Single Rust Binary + Embedded SQLite**: All structured memories and AST call graphs live in `~/.memory_cell/global.sqlite3`, paired with a per-repo binary symbol index (`.memorycell/symbols.idx`).
+- **Local Embeddings + Tree-Sitter AST**: Uses local `multilingual-e5-small` embeddings for semantic recall and native tree-sitter parsers across 22 languages for exact symbol and reference queries.
+- **Git-Tracked Knowledge (`.memory/`)**: Durable knowledge is stored as readable Markdown across 6 folders (`workflows/`, `anti_patterns/`, `preferences/`, `decisions/`, `concepts/`, `heuristics/`), kept in sync with SQLite automatically.
+
+```text
+  Your Autonomous Agents (Claude Code, Cursor, Antigravity, Codex, Custom MCP...)
+                                    │
+                            MCP + Lifecycle Hooks
+                                    ▼
+              ┌────────────────────────────────────────────┐
+              │           memory-cell (Rust Binary)        │
+              │                                            │
+              │  • Tree-sitter AST & Call Graph (22 langs) │
+              │  • Local Embeddings (multilingual-e5-small)│
+              │  • Session Snapshots & /dream Consolidation│
+              └──────────────┬──────────────┬──────────────┘
+                             ▼              ▼
+             ~/.memory_cell/global.sqlite3  .memory/*.md (Git-tracked)
+```
+
+---
+
+## Supported IDEs & Agents
+
+`memory-cell init` automatically detects installed tools and wires up MCP servers, lifecycle hooks, rules, and skills without overwriting your existing settings:
+
+| Platform | What `init` Configures |
+| :--- | :--- |
+| **Claude Code** | MCP server (`.mcp.json`), hooks (`.claude/settings.json`), rules, slash commands |
+| **Google Antigravity** | MCP server (`.agents/mcp_config.json`), hooks, rules, skills |
+| **Cursor** | MCP server (`.cursor/mcp.json`), hooks, always-applied rules (`.cursor/rules/memory-cell.mdc`) |
+| **GitHub Copilot (VS Code)** | MCP server (`.vscode/mcp.json`), hooks (`.github/hooks/memory-cell.json`), instructions |
+| **OpenAI Codex** | MCP server (`.codex/config.toml`), hooks (approve once via `/hooks`, or Settings > Hooks) |
+| **Devin** | MCP server (`.devin/mcp_config.json`), hooks (`.devin/hooks.v1.json`), rules |
+| **OpenCode** | MCP server (`opencode.json`), plugin (`.opencode/plugins/memory-cell.js`; restart OpenCode to load), instructions |
+| **Hermes Agent** | Global MCP server & hooks (`~/.hermes/config.yaml`; run `hermes` once or pass `--accept-hooks`; Hermes One is not supported) |
+| **Windsurf** | MCP server (`.codeium/windsurf/mcp_config.json`) |
+
+---
+
+## Slash Commands & Distillation
+
+### Slash Commands
+Provisioned automatically by `memory-cell init` across supported clients:
+
+| Command | Purpose |
+| :--- | :--- |
+| `/takeover` | Resume active goals, recent steps, and blockers after `/compact` or when switching IDEs. |
+| `/dream` | Consolidate recent session logs into structured `.memory/` entries and flag contradictions. |
+| `/memorize` | Explicitly save a workflow, anti-pattern, decision, preference, concept, or heuristic to `.memory/`. |
+| `/impact <symbol>` | Trace callers and estimate blast radius before refactoring a symbol. |
+| `/recall <query>` | Search chronological episodic session history and past debugging trails. |
+| `/stats` | Inspect indexed symbols, managed memories, and cache health. |
+
+### Zero-API-Key Distillation
+Memory Cell distills session trails into structured memories without requiring a separate paid API key. `memory-cell init` auto-selects the best available backend on your machine, and you can switch anytime:
+
+```bash
+# Reuse your logged-in local CLI agent (no API key required)
+memory-cell config distill cli/claude   # Claude Pro / Max via Claude Code CLI
+memory-cell config distill cli          # Auto-detect claude, codex, gemini, or agy
+
+# Fully local LLM or offline rule-based fallback
+memory-cell config distill ollama       # Local Ollama (auto-detects installed models)
+memory-cell config distill heuristic    # 100% offline, zero-LLM fast track
+
+# Optional cloud APIs (uses existing environment variable)
+memory-cell config distill anthropic    # ANTHROPIC_API_KEY
+memory-cell config distill openai       # OPENAI_API_KEY
+memory-cell config distill gemini       # GEMINI_API_KEY
+memory-cell config distill groq         # GROQ_API_KEY
+```
+
+Need per-project `.env` or CI overrides? See [Environment Variables](#reference-details) below.
+
+---
+
+## CLI Quick Reference
 
 | Command | Description |
 | :--- | :--- |
-| `memory-cell init` | Zero-prompt initialization: download/warm embedding model once (`--skip-warmup` to defer), sync workspace docs & JIT/Code Graph with progress bars, configure IDEs, and auto-select distillation backend (`--interactive` for wizard) |
-| `memory-cell config distill <engine>` | Switch distillation engine (`cli/claude`, `cli`, `heuristic`, `ollama`, `openai`) |
-| `memory-cell sync` | Incrementally re-index workspace changes, and extract entities and facts from changed documents (calls your configured model; background sync stores text only) |
-| `memory-cell search <query>` | Unified hybrid search across code symbols, docs, and semantic memory |
-| `memory-cell takeover` | Seamlessly resume working state and goals from previous agent sessions |
-| `memory-cell stats` | Inspect token ROI economics, cognitive health scorecard, and memory engrams |
-| `memory-cell doctor` | Validate `PATH` binary, workspace & IDE MCP configs, SQLite storage, embedding cache, and distillation backend |
-| `memory-cell dream` | Consolidate session events into long-term structured knowledge |
-| `memory-cell audit` | Offline, read-only scan of local Claude Code, Codex, Antigravity and OpenCode logs: repeated mistakes, risky writes, API-equivalent retry cost (`--output json`, `--since 30d`) |
-| `memory-cell uninstall` | Cleanly remove binary, IDE configurations, and injected rules |
+| `memory-cell init` | Zero-prompt setup: download/warm embedding model once (`--skip-warmup`), sync docs & AST index (`--skip-sync`), configure IDEs, and select distillation (`--interactive` for wizard, `-v` for verbose output). |
+| `memory-cell doctor` | Verify `PATH` binary, workspace & IDE MCP configs, SQLite health, model cache, index state, and distillation backend. |
+| `memory-cell sync` | Incrementally sync changed docs and AST files with live progress bars (`--text-only` skips LLM extraction; `--force` re-reads all files). |
+| `memory-cell search <query>` | Unified search across AST symbols, project docs, and long-term memories. |
+| `memory-cell takeover` | Print a handover briefing for the current workspace from recent session trails. |
+| `memory-cell dream` | Run memory consolidation and hygiene checks from the terminal (`--dry-run` to preview). |
+| `memory-cell stats` | View indexed symbols, engram counts, and workspace health metrics. |
+| `memory-cell audit` | Offline, read-only scan of local Claude Code, Codex, Antigravity, and OpenCode logs for repeated mistakes, risky writes, and retry cost (`--output json`, `--since 30d`). |
+| `memory-cell config distill <engine>` | Switch the distillation backend (`cli/claude`, `cli`, `ollama`, `heuristic`, `openai`, `anthropic`, `gemini`, `groq`). |
+| `memory-cell uninstall` | Remove installed binary, workspace `.memorycell/` cache, IDE configs, and rules (`--all` also removes `~/.memory_cell` and `.memory/`). |
 
 ---
 
-## 💻 Supported Programming Languages (22 Languages)
+## Reference Details
 
-Memory Cell provides native, instant symbol and call hierarchy intelligence across 22 major programming languages with zero additional dependencies:
+<details>
+<summary><strong>MCP Tools Reference</strong></summary>
 
-| Language | Recognized File Extensions | Primary Capabilities |
+### Retrieval & Memory
+- `reason(query, workspace_path)` — Grounded retrieval across `.memory/` rules, project docs, and AST architecture context.
+- `search(query)` — Unified lookup across code symbols and long-term memory.
+- `ingest(file_path)` — Ingest Markdown, source files, or PDFs into workspace memory.
+- `forget(id)` — Remove an obsolete memory and its linked `.memory/` file.
+
+### Code Intelligence (22 Languages)
+- `find_symbol(name)` — Pinpoint function, struct, class, interface, or trait definitions and exact line numbers.
+- `trace_callers(symbol, direction)` — Trace callers or callees across files without manual grep.
+- `find_references(identifier)` — Locate declarations, reads, and writes for variables and fields.
+- `analyze_impact(symbol)` — Evaluate refactoring blast radius and affected call sites before editing.
+
+### Session Handover, Consolidation & Governance
+- `takeover()` — Reconstruct active working memory and next steps across sessions or IDEs.
+- `recall(query)` — Query chronological episodic history and past debugging trails.
+- `dream(dry_run)` — Consolidate episodic events into structured memories and detect contradictions.
+- `list_governance_tickets()` / `resolve_governance_ticket(ticket_id, action)` — Inspect and resolve flagged knowledge conflicts.
+- `stats()` — Return managed memory counts and workspace index statistics.
+
+</details>
+
+<details>
+<summary><strong>Supported Languages (22 Languages) & Binary Platforms</strong></summary>
+
+### Programming Languages
+| Language | File Extensions | Primary AST Capabilities |
 | :--- | :--- | :--- |
 | **Rust** | `.rs` | Functions, structs, enums, traits, `impl` blocks, call hierarchies |
 | **TypeScript** | `.ts`, `.tsx`, `.ets` | Functions, classes, interfaces, type aliases, methods, call sites |
@@ -264,17 +249,45 @@ Memory Cell provides native, instant symbol and call hierarchy intelligence acro
 | **R** | `.r`, `.R` | Function definitions, variable assignments, calls |
 | **Erlang** | `.erl`, `.hrl` | Function clauses, exported functions, atoms, calls |
 
----
-
-## 🖥️ Supported Platforms
-
-Pre-compiled native binaries are bundled automatically for your architecture (no compilation or runtime setup required):
+### Pre-Compiled Platforms
 - **macOS**: Apple Silicon (`darwin-arm64`) & Intel (`darwin-x64`)
 - **Linux**: x86_64 (`linux-x64`) & ARM64 (`linux-arm64`)
 - **Windows**: x86_64 (`win32-x64`)
 
+</details>
+
+<details>
+<summary><strong>Environment Variables (.env &amp; Shell Overrides)</strong></summary>
+
+Shell environment variables and a project `.env` file override the global defaults stored in `~/.memory_cell/config.json`.
+
+```bash
+# Example: pin Claude Code CLI for a single project (no API key required)
+DISTILL_PROVIDER=cli
+DISTILL_MODEL=claude
+```
+
+| Variable | Default | Purpose |
+| :--- | :--- | :--- |
+| `DISTILL_PROVIDER` | auto (`~/.memory_cell/config.json`) | Override distillation backend (`cli`, `ollama`, `heuristic`, `openai`, `anthropic`, `gemini`, `groq`, `mcp`) |
+| `DISTILL_MODEL` | provider default | Pin CLI agent (`claude`, `codex`, `gemini`, `agy`) or model name |
+| `DISTILL_ENDPOINT` | provider default | Custom endpoint (e.g. Ollama `http://localhost:11434` or OpenAI-compatible base URL) |
+| `MEMORY_CELL_DB` | `~/.memory_cell/global.sqlite3` | Custom SQLite database path |
+| `MEMORY_CELL_PROVIDER` / `MEMORY_CELL_MODEL` | `local` / `multilingual-e5-small` | Override embedding provider (`local`, `openai`) and model |
+| `MEMORY_CELL_USER` / `MEMORY_CELL_WORKSPACE` | auto-detected | Pin user scope or workspace root |
+| `MEMORY_CELL_HOOK_CONTEXT` | `on` | Set to `off` to disable per-message hook context injection while still recording episodes |
+| `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` / `GEMINI_API_KEY` / `GROQ_API_KEY` | unset | Only required when using a cloud API distillation or embedding provider |
+
+</details>
+
 ---
 
-## 📄 License
-Apache-2.0 © Memory Cell Team & Mux Tsou
+## Team Adoption & Git-Native Sharing
 
+Every rule, workflow, anti-pattern, and architectural decision in `.memory/` is plain Markdown. Commit `.memory/` to your repository so new hires and teammates automatically inherit the same agent guardrails on `git pull` and `memory-cell init` — regardless of which IDE or agent they use. For AI-native teams exploring multi-repo topology or real-time team sync, open a discussion or issue on GitHub.
+
+---
+
+## License
+
+Apache-2.0 © Memory Cell Team & Mux Tsou
